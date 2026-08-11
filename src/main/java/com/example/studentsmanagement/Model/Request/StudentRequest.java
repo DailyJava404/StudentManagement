@@ -1,14 +1,19 @@
 package com.example.studentsmanagement.Model.Request;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
-import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Pattern;
-import jakarta.validation.constraints.Size;
+import jakarta.validation.constraints.*;
+import lombok.Getter;
+import lombok.Setter;
 
+import java.time.LocalDate;
 import java.util.Date;
 
-public class UserRequest {
+@Getter
+@Setter
+public class StudentRequest {
+
+    private Long studentId;
 
     @NotBlank(message = "First name is required")
     @Size(min = 2, max = 50, message = "First name must be between 2 and 50 characters")
@@ -18,11 +23,13 @@ public class UserRequest {
     @Size(min = 2, max = 50, message = "Last name must be between 2 and 50 characters")
     private String lastName;
 
-    @Temporal(TemporalType.DATE)
-    private Date dateOfBirth;
+    @NotNull(message = "Date of birth is required")
+    @Past(message = "Date of birth must be in the past")
+    @JsonFormat(pattern = "yyyy-MM-dd")
+    private LocalDate dateOfBirth;
 
     @NotBlank(message = "Gender is required")
-    @Pattern(regexp = "^(MALE|FEMALE|OTHER)$", message = "Invalid gender value")
+    @Pattern(regexp = "^(MALE|FEMALE|OTHER|Male|Female|Other)$", message = "Invalid gender value")
     private String gender;
 
     @NotBlank(message = "Email is required")
@@ -34,7 +41,6 @@ public class UserRequest {
     @Pattern(regexp = "^\\d{10}$", message = "Phone must be exactly 10 digits")
     private String phone;
 
-    @NotBlank(message = "Address is required")
     @Size(max = 255, message = "Address is too long")
     private String address;
 }

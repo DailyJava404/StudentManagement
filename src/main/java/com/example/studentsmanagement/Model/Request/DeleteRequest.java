@@ -1,4 +1,11 @@
 package com.example.studentsmanagement.Model.Request;
 
-public class DeleteRequest {
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Positive;
+
+public record DeleteRequest(
+        @NotNull(message = "Student ID is required")
+        @Positive(message = "Student ID must be positive")
+        Long studentId
+) {
 }

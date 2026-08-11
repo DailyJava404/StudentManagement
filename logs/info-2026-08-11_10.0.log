@@ -1,0 +1,41 @@
+2026-08-11 10:01:51 [3B199786] [POST /student/create] INFO  - === Extracted username: freshAdmin6
+2026-08-11 10:01:51 [3B199786] [POST /student/create] INFO  - === Loaded userDetails: {"userInfo":{"id":7,"password":"$2a$10$ddehUUhvGFPkiEd95kDyBu8GBGj/mGItUrBMqLHxfqVJyCl3EoZY.","role":"Admin","username":"freshAdmin6"},"accountNonExpired":true,"accountNonLocked":true,"authorities":[{"authority":"ROLE_Admin"}],"credentialsNonExpired":true,"enabled":true,"password":"$2a$10$ddehUUhvGFPkiEd95kDyBu8GBGj/mGItUrBMqLHxfqVJyCl3EoZY.","username":"freshAdmin6"}
+2026-08-11 10:01:51 [3B199786] [POST /student/create] INFO  - === Token valid? true
+2026-08-11 10:01:51 [3B199786] [POST /student/create] INFO  - === Authentication SET in context
+2026-08-11 10:02:13 [00390EF3] [POST /student/update] INFO  - === Extracted username: freshAdmin6
+2026-08-11 10:02:13 [00390EF3] [POST /student/update] INFO  - === Loaded userDetails: {"userInfo":{"id":7,"password":"$2a$10$ddehUUhvGFPkiEd95kDyBu8GBGj/mGItUrBMqLHxfqVJyCl3EoZY.","role":"Admin","username":"freshAdmin6"},"accountNonExpired":true,"accountNonLocked":true,"authorities":[{"authority":"ROLE_Admin"}],"credentialsNonExpired":true,"enabled":true,"password":"$2a$10$ddehUUhvGFPkiEd95kDyBu8GBGj/mGItUrBMqLHxfqVJyCl3EoZY.","username":"freshAdmin6"}
+2026-08-11 10:02:13 [00390EF3] [POST /student/update] INFO  - === Token valid? true
+2026-08-11 10:02:13 [00390EF3] [POST /student/update] INFO  - === Authentication SET in context
+2026-08-11 10:02:17 [51A85566] [POST /student/update] INFO  - === Extracted username: freshAdmin6
+2026-08-11 10:02:17 [51A85566] [POST /student/update] INFO  - === Loaded userDetails: {"userInfo":{"id":7,"password":"$2a$10$ddehUUhvGFPkiEd95kDyBu8GBGj/mGItUrBMqLHxfqVJyCl3EoZY.","role":"Admin","username":"freshAdmin6"},"accountNonExpired":true,"accountNonLocked":true,"authorities":[{"authority":"ROLE_Admin"}],"credentialsNonExpired":true,"enabled":true,"password":"$2a$10$ddehUUhvGFPkiEd95kDyBu8GBGj/mGItUrBMqLHxfqVJyCl3EoZY.","username":"freshAdmin6"}
+2026-08-11 10:02:17 [51A85566] [POST /student/update] INFO  - === Token valid? true
+2026-08-11 10:02:17 [51A85566] [POST /student/update] INFO  - === Authentication SET in context
+2026-08-11 10:02:43 [C2A8F964] [POST /student/delete] INFO  - === Extracted username: freshAdmin6
+2026-08-11 10:02:43 [C2A8F964] [POST /student/delete] INFO  - === Loaded userDetails: {"userInfo":{"id":7,"password":"$2a$10$ddehUUhvGFPkiEd95kDyBu8GBGj/mGItUrBMqLHxfqVJyCl3EoZY.","role":"Admin","username":"freshAdmin6"},"accountNonExpired":true,"accountNonLocked":true,"authorities":[{"authority":"ROLE_Admin"}],"credentialsNonExpired":true,"enabled":true,"password":"$2a$10$ddehUUhvGFPkiEd95kDyBu8GBGj/mGItUrBMqLHxfqVJyCl3EoZY.","username":"freshAdmin6"}
+2026-08-11 10:02:43 [C2A8F964] [POST /student/delete] INFO  - === Token valid? true
+2026-08-11 10:02:43 [C2A8F964] [POST /student/delete] INFO  - === Authentication SET in context
+2026-08-11 10:02:55 [6CB694C6] [GET /student/getAllStudents] INFO  - === Extracted username: freshAdmin6
+2026-08-11 10:02:55 [6CB694C6] [GET /student/getAllStudents] INFO  - === Loaded userDetails: {"userInfo":{"id":7,"password":"$2a$10$ddehUUhvGFPkiEd95kDyBu8GBGj/mGItUrBMqLHxfqVJyCl3EoZY.","role":"Admin","username":"freshAdmin6"},"accountNonExpired":true,"accountNonLocked":true,"authorities":[{"authority":"ROLE_Admin"}],"credentialsNonExpired":true,"enabled":true,"password":"$2a$10$ddehUUhvGFPkiEd95kDyBu8GBGj/mGItUrBMqLHxfqVJyCl3EoZY.","username":"freshAdmin6"}
+2026-08-11 10:02:55 [6CB694C6] [GET /student/getAllStudents] INFO  - === Token valid? true
+2026-08-11 10:02:55 [6CB694C6] [GET /student/getAllStudents] INFO  - === Authentication SET in context
+2026-08-11 10:03:09 [289F3B34] [POST /student/getStudentById] INFO  - === Extracted username: freshAdmin6
+2026-08-11 10:03:09 [289F3B34] [POST /student/getStudentById] INFO  - === Loaded userDetails: {"userInfo":{"id":7,"password":"$2a$10$ddehUUhvGFPkiEd95kDyBu8GBGj/mGItUrBMqLHxfqVJyCl3EoZY.","role":"Admin","username":"freshAdmin6"},"accountNonExpired":true,"accountNonLocked":true,"authorities":[{"authority":"ROLE_Admin"}],"credentialsNonExpired":true,"enabled":true,"password":"$2a$10$ddehUUhvGFPkiEd95kDyBu8GBGj/mGItUrBMqLHxfqVJyCl3EoZY.","username":"freshAdmin6"}
+2026-08-11 10:03:09 [289F3B34] [POST /student/getStudentById] INFO  - === Token valid? true
+2026-08-11 10:03:09 [289F3B34] [POST /student/getStudentById] INFO  - === Authentication SET in context
+2026-08-11 10:03:14 [86425368] [POST /student/getStudentById] INFO  - === Extracted username: freshAdmin6
+2026-08-11 10:03:14 [86425368] [POST /student/getStudentById] INFO  - === Loaded userDetails: {"userInfo":{"id":7,"password":"$2a$10$ddehUUhvGFPkiEd95kDyBu8GBGj/mGItUrBMqLHxfqVJyCl3EoZY.","role":"Admin","username":"freshAdmin6"},"accountNonExpired":true,"accountNonLocked":true,"authorities":[{"authority":"ROLE_Admin"}],"credentialsNonExpired":true,"enabled":true,"password":"$2a$10$ddehUUhvGFPkiEd95kDyBu8GBGj/mGItUrBMqLHxfqVJyCl3EoZY.","username":"freshAdmin6"}
+2026-08-11 10:03:14 [86425368] [POST /student/getStudentById] INFO  - === Token valid? true
+2026-08-11 10:03:14 [86425368] [POST /student/getStudentById] INFO  - === Authentication SET in context
+2026-08-11 10:03:21 [5ABC6A35] [POST /external/users] INFO  - === Extracted username: freshAdmin6
+2026-08-11 10:03:21 [5ABC6A35] [POST /external/users] INFO  - === Loaded userDetails: {"userInfo":{"id":7,"password":"$2a$10$ddehUUhvGFPkiEd95kDyBu8GBGj/mGItUrBMqLHxfqVJyCl3EoZY.","role":"Admin","username":"freshAdmin6"},"accountNonExpired":true,"accountNonLocked":true,"authorities":[{"authority":"ROLE_Admin"}],"credentialsNonExpired":true,"enabled":true,"password":"$2a$10$ddehUUhvGFPkiEd95kDyBu8GBGj/mGItUrBMqLHxfqVJyCl3EoZY.","username":"freshAdmin6"}
+2026-08-11 10:03:21 [5ABC6A35] [POST /external/users] INFO  - === Token valid? true
+2026-08-11 10:03:21 [5ABC6A35] [POST /external/users] INFO  - === Authentication SET in context
+2026-08-11 10:03:30 [DDD3EC6D] [GET /external/users] INFO  - === Extracted username: freshAdmin6
+2026-08-11 10:03:30 [DDD3EC6D] [GET /external/users] INFO  - === Loaded userDetails: {"userInfo":{"id":7,"password":"$2a$10$ddehUUhvGFPkiEd95kDyBu8GBGj/mGItUrBMqLHxfqVJyCl3EoZY.","role":"Admin","username":"freshAdmin6"},"accountNonExpired":true,"accountNonLocked":true,"authorities":[{"authority":"ROLE_Admin"}],"credentialsNonExpired":true,"enabled":true,"password":"$2a$10$ddehUUhvGFPkiEd95kDyBu8GBGj/mGItUrBMqLHxfqVJyCl3EoZY.","username":"freshAdmin6"}
+2026-08-11 10:03:30 [DDD3EC6D] [GET /external/users] INFO  - === Token valid? true
+2026-08-11 10:03:30 [DDD3EC6D] [GET /external/users] INFO  - === Authentication SET in context
+2026-08-11 10:05:42 [] [] INFO  - Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-11 10:05:42 [] [] INFO  - Graceful shutdown complete
+2026-08-11 10:05:42 [] [] INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-11 10:05:42 [] [] INFO  - HikariPool-1 - Shutdown initiated...
+2026-08-11 10:05:42 [] [] INFO  - HikariPool-1 - Shutdown completed.

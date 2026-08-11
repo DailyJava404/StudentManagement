@@ -1,0 +1,57 @@
+2026-08-11 07:32:36 [] [] INFO  - Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-11 07:32:36 [3A75A288] [POST /auth/login] INFO  - Response: POST /auth/login status=200
+2026-08-11 07:32:37 [] [] INFO  - Graceful shutdown complete
+2026-08-11 07:32:37 [] [] INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-11 07:32:37 [] [] INFO  - HikariPool-1 - Shutdown initiated...
+2026-08-11 07:32:37 [] [] INFO  - HikariPool-1 - Shutdown completed.
+2026-08-11 07:38:07 [] [] INFO  - Starting StudentManagementApplication using Java 26.0.2 with PID 97540 (/Users/ewent/Documents/Programmer/Java (Spring boot)/StudentManagement/StudentManagement/target/classes started by ewent in /Users/ewent/Documents/Programmer/Java (Spring boot)/StudentManagement/StudentManagement)
+2026-08-11 07:38:07 [] [] INFO  - No active profile set, falling back to 1 default profile: "default"
+2026-08-11 07:38:07 [] [] INFO  - HV000001: Hibernate Validator 9.1.0.Final
+2026-08-11 07:38:07 [] [] INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-11 07:38:07 [] [] INFO  - Finished Spring Data repository scanning in 15 ms. Found 2 JPA repository interfaces.
+2026-08-11 07:38:07 [] [] INFO  - BeanFactory id=338025d5-5fb0-362a-8af1-5189d372b08c
+2026-08-11 07:38:07 [] [] INFO  - Tomcat initialized with port 8080 (http)
+2026-08-11 07:38:07 [] [] INFO  - Initializing ProtocolHandler ["http-nio-8080"]
+2026-08-11 07:38:07 [] [] INFO  - Starting service [Tomcat]
+2026-08-11 07:38:07 [] [] INFO  - Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-11 07:38:07 [] [] INFO  - Root WebApplicationContext: initialization completed in 542 ms
+2026-08-11 07:38:07 [] [] INFO  - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-11 07:38:07 [] [] INFO  - HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-08-11 07:38:07 [] [] INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-11 07:38:07 [] [] INFO  - HikariPool-1 - Starting...
+2026-08-11 07:38:08 [] [] INFO  - HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: 71237e01-e151-42bd-b091-dab347e59a5f
+2026-08-11 07:38:08 [] [] INFO  - HikariPool-1 - Start completed.
+2026-08-11 07:38:08 [] [] INFO  - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlserver://localhost:1433;connectRetryInterval=10;connectRetryCount=1;maxResultBuffer=-1;sendTemporalDataTypesAsStringForBulkCopy=true;delayLoadingLobs=true;useFmtOnly=false;cacheBulkCopyMetadata=false;useBulkCopyForBatchInsert=false;cancelQueryTimeout=-1;sslProtocol=TLS;calcBigDecimalPrecision=false;useDefaultJaasConfig=false;jaasConfigurationName=SQLJDBCDriver;statementPoolingCacheSize=0;serverPreparedStatementDiscardThreshold=10;enablePrepareOnFirstPreparedStatementCall=false;fips=false;socketTimeout=0;authentication=NotSpecified;authenticationScheme=nativeAuthentication;xopenStates=false;datetimeParameterType=datetime2;sendTimeAsDatetime=true;replication=false;trustStoreType=JKS;trustServerCertificate=true;TransparentNetworkIPResolution=true;iPAddressPreference=IPv4First;serverNameAsACE=false;sendStringParametersAsUnicode=true;selectMethod=direct;responseBuffering=adaptive;queryTimeout=-1;packetSize=8000;multiSubnetFailover=false;loginTimeout=30;lockTimeout=-1;lastUpdateCount=true;useFlexibleCallableStatements=true;useDefaultGSSCredential=false;prepareMethod=prepexec;encrypt=true;disableStatementPooling=true;databaseName=students_management;columnEncryptionSetting=Disabled;applicationName=Microsoft JDBC Driver for SQL Server;applicationIntent=readwrite;]
+	Database driver: Microsoft JDBC Driver 12.8 for SQL Server
+	Database dialect: SQLServerDialect
+	Database version: 16.0
+	Default catalog/schema: students_management/dbo
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 128
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-11 07:38:08 [] [] INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-11 07:38:08 [] [] INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-11 07:38:08 [] [] INFO  - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-11 07:38:08 [] [] INFO  - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2026-08-11 07:38:09 [] [] INFO  - Starting ProtocolHandler ["http-nio-8080"]
+2026-08-11 07:38:09 [] [] INFO  - Tomcat started on port 8080 (http) with context path '/'
+2026-08-11 07:38:09 [] [] INFO  - Started StudentManagementApplication in 2.33 seconds (process running for 2.621)
+2026-08-11 07:38:16 [] [] INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-11 07:38:16 [] [] INFO  - Initializing Servlet 'dispatcherServlet'
+2026-08-11 07:38:16 [] [] INFO  - Completed initialization in 2 ms
+2026-08-11 07:38:16 [1228C8BF] [POST /auth/login] INFO  - === JwtAuthFilter TRIGGERED for: /auth/login
+2026-08-11 07:38:16 [1228C8BF] [POST /auth/login] INFO  - === No valid Bearer header, skipping auth
+2026-08-11 07:38:27 [6F01495A] [GET /external/users] INFO  - === JwtAuthFilter TRIGGERED for: /external/users
+2026-08-11 07:38:27 [6F01495A] [GET /external/users] INFO  - === Extracted username: freshAdmin4
+2026-08-11 07:38:27 [6F01495A] [GET /external/users] INFO  - === Loaded userDetails: freshAdmin4
+2026-08-11 07:38:27 [6F01495A] [GET /external/users] INFO  - === Token valid? true
+2026-08-11 07:38:27 [6F01495A] [GET /external/users] INFO  - === Authentication SET in context
+2026-08-11 07:38:40 [963F8237] [POST /external/users] INFO  - === JwtAuthFilter TRIGGERED for: /external/users
+2026-08-11 07:38:40 [963F8237] [POST /external/users] INFO  - === Extracted username: freshAdmin4
+2026-08-11 07:38:40 [963F8237] [POST /external/users] INFO  - === Loaded userDetails: freshAdmin4
+2026-08-11 07:38:40 [963F8237] [POST /external/users] INFO  - === Token valid? true
+2026-08-11 07:38:40 [963F8237] [POST /external/users] INFO  - === Authentication SET in context

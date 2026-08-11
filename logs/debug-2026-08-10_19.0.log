@@ -1,0 +1,8 @@
+2026-08-10 19:47:12 [] [] DEBUG - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-08-10 19:47:15 [] [] DEBUG - Filter 'requestLoggingFilter' configured for use
+2026-08-10 19:47:15 [] [] DEBUG - Filter 'jwtAuthFilter' configured for use
+2026-08-10 19:48:05 [F0BB828F] [POST /auth/register] DEBUG - New user saved to DB: com.example.studentsmanagement.Entity.UserInfo@46d3c912
+2026-08-10 19:51:50 [3A9CE0BE] [POST /auth/register] DEBUG - New user saved to DB: com.example.studentsmanagement.Entity.UserInfo@fc1365d
+2026-08-10 19:58:40 [] [] DEBUG - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-08-10 19:58:42 [] [] DEBUG - Filter 'requestLoggingFilter' configured for use
+2026-08-10 19:58:42 [] [] DEBUG - Filter 'jwtAuthFilter' configured for use

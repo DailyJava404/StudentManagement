@@ -1,8 +1,9 @@
-package com.example.studentsmanagement.Controller;
+package com.example.studentsmanagement.Config;
 
 import com.example.studentsmanagement.Model.Response.ApiResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
@@ -36,5 +37,16 @@ public class GlobalExceptionHandler {
         return ResponseEntity
                 .status(HttpStatus.BAD_REQUEST)
                 .body(response);
+    }
+
+    @ExceptionHandler(HttpMessageNotReadableException.class)
+    public ResponseEntity<ApiResponse<Void>> handleInvalidJson(
+            HttpMessageNotReadableException exception) {
+
+        return ResponseEntity.badRequest()
+                .body(ApiResponse.fail(
+                        400,
+                        "Invalid request body. ID must be a number"
+                ));
     }
 }

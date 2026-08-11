@@ -1,0 +1,9 @@
+2026-08-10 13:40:29 [] DEBUG c.e.s.StudentManagementApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-08-10 13:40:32 [] DEBUG c.e.s.Logger.RequestLoggingFilter - Filter 'requestLoggingFilter' configured for use
+2026-08-10 13:40:32 [] DEBUG c.e.s.Security.JwtAuthFilter - Filter 'jwtAuthFilter' configured for use
+2026-08-10 13:50:20 [] DEBUG c.e.s.StudentManagementApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-08-10 13:50:22 [] DEBUG c.e.s.Logger.RequestLoggingFilter - Filter 'requestLoggingFilter' configured for use
+2026-08-10 13:50:22 [] DEBUG c.e.s.Security.JwtAuthFilter - Filter 'jwtAuthFilter' configured for use
+2026-08-10 13:50:57 [] DEBUG c.e.s.StudentManagementApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-08-10 13:50:59 [] DEBUG c.e.s.Logger.RequestLoggingFilter - Filter 'requestLoggingFilter' configured for use
+2026-08-10 13:50:59 [] DEBUG c.e.s.Security.JwtAuthFilter - Filter 'jwtAuthFilter' configured for use

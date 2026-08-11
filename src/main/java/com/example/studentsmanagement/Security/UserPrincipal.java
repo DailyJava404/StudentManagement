@@ -1,5 +1,6 @@
-package com.example.studentsmanagement.Entity;
+package com.example.studentsmanagement.Security;
 
+import com.example.studentsmanagement.Entity.UserInfo;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -17,7 +18,7 @@ public class UserPrincipal implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return List.of(new SimpleGrantedAuthority("ROLE_" + userInfo.getRole().getRolename()));
+        return List.of(new SimpleGrantedAuthority("ROLE_" + userInfo.getRole().name()));
     }
 
     @Override

@@ -1,6 +1,6 @@
 package com.example.studentsmanagement.Enum;
 
-public enum EnumRole {
+public enum Role {
     Admin,
     Student,
 }

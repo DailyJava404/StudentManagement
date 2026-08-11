@@ -1,0 +1,164 @@
+2026-08-10 10:07:08 [529ECD54] INFO  c.e.s.Security.JwtAuthFilter - === JwtAuthFilter TRIGGERED for: /auth/register
+2026-08-10 10:07:08 [529ECD54] INFO  c.e.s.Security.JwtAuthFilter - === Authorization header: null
+2026-08-10 10:07:08 [529ECD54] INFO  c.e.s.Security.JwtAuthFilter - === No valid Bearer header, skipping auth
+2026-08-10 10:07:18 [C03F88F7] INFO  c.e.s.Security.JwtAuthFilter - === JwtAuthFilter TRIGGERED for: /auth/register
+2026-08-10 10:07:18 [C03F88F7] INFO  c.e.s.Security.JwtAuthFilter - === Authorization header: null
+2026-08-10 10:07:18 [C03F88F7] INFO  c.e.s.Security.JwtAuthFilter - === No valid Bearer header, skipping auth
+2026-08-10 10:07:26 [C03F88F7] INFO  c.e.s.Service.AuthService - Register successful for username: freshuser9
+2026-08-10 10:09:26 [] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-10 10:09:27 [] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-08-10 10:09:27 [] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-10 10:09:27 [] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-08-10 10:09:27 [] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-08-10 10:09:29 [] INFO  c.e.s.StudentManagementApplication - Starting StudentManagementApplication using Java 26.0.2 with PID 73487 (/Users/ewent/Documents/Programmer/Java (Spring boot)/StudentManagement/StudentManagement/target/classes started by ewent in /Users/ewent/Documents/Programmer/Java (Spring boot)/StudentManagement/StudentManagement)
+2026-08-10 10:09:29 [] INFO  c.e.s.StudentManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2026-08-10 10:09:29 [] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.1.0.Final
+2026-08-10 10:09:29 [] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-10 10:09:29 [] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 2 JPA repository interfaces.
+2026-08-10 10:09:29 [] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-08-10 10:09:29 [] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-08-10 10:09:29 [] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-08-10 10:09:29 [] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-10 10:09:29 [] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 517 ms
+2026-08-10 10:09:30 [] INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-10 10:09:30 [] INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-08-10 10:09:30 [] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-10 10:09:30 [] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-08-10 10:09:30 [] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: 51ad8a03-359f-4796-86d2-d62527e9f4d1
+2026-08-10 10:09:30 [] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-08-10 10:09:30 [] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlserver://localhost:1433;connectRetryInterval=10;connectRetryCount=1;maxResultBuffer=-1;sendTemporalDataTypesAsStringForBulkCopy=true;delayLoadingLobs=true;useFmtOnly=false;cacheBulkCopyMetadata=false;useBulkCopyForBatchInsert=false;cancelQueryTimeout=-1;sslProtocol=TLS;calcBigDecimalPrecision=false;useDefaultJaasConfig=false;jaasConfigurationName=SQLJDBCDriver;statementPoolingCacheSize=0;serverPreparedStatementDiscardThreshold=10;enablePrepareOnFirstPreparedStatementCall=false;fips=false;socketTimeout=0;authentication=NotSpecified;authenticationScheme=nativeAuthentication;xopenStates=false;datetimeParameterType=datetime2;sendTimeAsDatetime=true;replication=false;trustStoreType=JKS;trustServerCertificate=true;TransparentNetworkIPResolution=true;iPAddressPreference=IPv4First;serverNameAsACE=false;sendStringParametersAsUnicode=true;selectMethod=direct;responseBuffering=adaptive;queryTimeout=-1;packetSize=8000;multiSubnetFailover=false;loginTimeout=30;lockTimeout=-1;lastUpdateCount=true;useFlexibleCallableStatements=true;useDefaultGSSCredential=false;prepareMethod=prepexec;encrypt=true;disableStatementPooling=true;databaseName=students_management;columnEncryptionSetting=Disabled;applicationName=Microsoft JDBC Driver for SQL Server;applicationIntent=readwrite;]
+	Database driver: Microsoft JDBC Driver 12.8 for SQL Server
+	Database dialect: SQLServerDialect
+	Database version: 16.0
+	Default catalog/schema: students_management/dbo
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 128
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-10 10:09:30 [] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-10 10:09:31 [] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-10 10:09:31 [] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-10 10:09:31 [] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2026-08-10 10:09:31 [] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-08-10 10:09:31 [] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-08-10 10:09:31 [] INFO  c.e.s.StudentManagementApplication - Started StudentManagementApplication in 2.371 seconds (process running for 2.668)
+2026-08-10 10:34:29 [] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-10 10:34:29 [] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-08-10 10:34:29 [] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-10 10:34:29 [] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-08-10 10:34:29 [] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-08-10 10:49:27 [] INFO  c.e.s.StudentManagementApplication - Starting StudentManagementApplication using Java 26.0.2 with PID 75122 (/Users/ewent/Documents/Programmer/Java (Spring boot)/StudentManagement/StudentManagement/target/classes started by ewent in /Users/ewent/Documents/Programmer/Java (Spring boot)/StudentManagement/StudentManagement)
+2026-08-10 10:49:27 [] INFO  c.e.s.StudentManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2026-08-10 10:49:27 [] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.1.0.Final
+2026-08-10 10:49:27 [] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-10 10:49:27 [] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 2 JPA repository interfaces.
+2026-08-10 10:49:27 [] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-08-10 10:49:27 [] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-08-10 10:49:27 [] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-08-10 10:49:27 [] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-10 10:49:27 [] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 538 ms
+2026-08-10 10:49:27 [] INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-10 10:49:27 [] INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-08-10 10:49:27 [] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-10 10:49:27 [] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-08-10 10:49:28 [] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: 936bff28-457a-48a7-8c38-579345a40eb0
+2026-08-10 10:49:28 [] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-08-10 10:49:28 [] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlserver://localhost:1433;connectRetryInterval=10;connectRetryCount=1;maxResultBuffer=-1;sendTemporalDataTypesAsStringForBulkCopy=true;delayLoadingLobs=true;useFmtOnly=false;cacheBulkCopyMetadata=false;useBulkCopyForBatchInsert=false;cancelQueryTimeout=-1;sslProtocol=TLS;calcBigDecimalPrecision=false;useDefaultJaasConfig=false;jaasConfigurationName=SQLJDBCDriver;statementPoolingCacheSize=0;serverPreparedStatementDiscardThreshold=10;enablePrepareOnFirstPreparedStatementCall=false;fips=false;socketTimeout=0;authentication=NotSpecified;authenticationScheme=nativeAuthentication;xopenStates=false;datetimeParameterType=datetime2;sendTimeAsDatetime=true;replication=false;trustStoreType=JKS;trustServerCertificate=true;TransparentNetworkIPResolution=true;iPAddressPreference=IPv4First;serverNameAsACE=false;sendStringParametersAsUnicode=true;selectMethod=direct;responseBuffering=adaptive;queryTimeout=-1;packetSize=8000;multiSubnetFailover=false;loginTimeout=30;lockTimeout=-1;lastUpdateCount=true;useFlexibleCallableStatements=true;useDefaultGSSCredential=false;prepareMethod=prepexec;encrypt=true;disableStatementPooling=true;databaseName=students_management;columnEncryptionSetting=Disabled;applicationName=Microsoft JDBC Driver for SQL Server;applicationIntent=readwrite;]
+	Database driver: Microsoft JDBC Driver 12.8 for SQL Server
+	Database dialect: SQLServerDialect
+	Database version: 16.0
+	Default catalog/schema: students_management/dbo
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 128
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-10 10:49:29 [] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-10 10:49:29 [] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-10 10:49:29 [] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-10 10:49:29 [] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2026-08-10 10:49:29 [] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-08-10 10:49:29 [] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-08-10 10:49:29 [] INFO  c.e.s.StudentManagementApplication - Started StudentManagementApplication in 3.151 seconds (process running for 3.439)
+2026-08-10 10:50:42 [] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-10 10:50:42 [] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-08-10 10:50:42 [] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-10 10:50:42 [] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-08-10 10:50:42 [] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-08-10 10:50:44 [] INFO  c.e.s.StudentManagementApplication - Starting StudentManagementApplication using Java 26.0.2 with PID 75178 (/Users/ewent/Documents/Programmer/Java (Spring boot)/StudentManagement/StudentManagement/target/classes started by ewent in /Users/ewent/Documents/Programmer/Java (Spring boot)/StudentManagement/StudentManagement)
+2026-08-10 10:50:44 [] INFO  c.e.s.StudentManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2026-08-10 10:50:44 [] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.1.0.Final
+2026-08-10 10:50:44 [] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-10 10:50:44 [] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 21 ms. Found 2 JPA repository interfaces.
+2026-08-10 10:50:44 [] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-08-10 10:50:44 [] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-08-10 10:50:44 [] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-08-10 10:50:44 [] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-10 10:50:44 [] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 616 ms
+2026-08-10 10:50:44 [] INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-10 10:50:44 [] INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-08-10 10:50:45 [] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-10 10:50:45 [] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-08-10 10:50:45 [] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: 502d4760-a7cb-47c2-92df-072b41954cb1
+2026-08-10 10:50:45 [] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-08-10 10:50:45 [] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlserver://localhost:1433;connectRetryInterval=10;connectRetryCount=1;maxResultBuffer=-1;sendTemporalDataTypesAsStringForBulkCopy=true;delayLoadingLobs=true;useFmtOnly=false;cacheBulkCopyMetadata=false;useBulkCopyForBatchInsert=false;cancelQueryTimeout=-1;sslProtocol=TLS;calcBigDecimalPrecision=false;useDefaultJaasConfig=false;jaasConfigurationName=SQLJDBCDriver;statementPoolingCacheSize=0;serverPreparedStatementDiscardThreshold=10;enablePrepareOnFirstPreparedStatementCall=false;fips=false;socketTimeout=0;authentication=NotSpecified;authenticationScheme=nativeAuthentication;xopenStates=false;datetimeParameterType=datetime2;sendTimeAsDatetime=true;replication=false;trustStoreType=JKS;trustServerCertificate=true;TransparentNetworkIPResolution=true;iPAddressPreference=IPv4First;serverNameAsACE=false;sendStringParametersAsUnicode=true;selectMethod=direct;responseBuffering=adaptive;queryTimeout=-1;packetSize=8000;multiSubnetFailover=false;loginTimeout=30;lockTimeout=-1;lastUpdateCount=true;useFlexibleCallableStatements=true;useDefaultGSSCredential=false;prepareMethod=prepexec;encrypt=true;disableStatementPooling=true;databaseName=students_management;columnEncryptionSetting=Disabled;applicationName=Microsoft JDBC Driver for SQL Server;applicationIntent=readwrite;]
+	Database driver: Microsoft JDBC Driver 12.8 for SQL Server
+	Database dialect: SQLServerDialect
+	Database version: 16.0
+	Default catalog/schema: students_management/dbo
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 128
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-10 10:50:45 [] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-10 10:50:45 [] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-10 10:50:45 [] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-10 10:50:46 [] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2026-08-10 10:50:46 [] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-08-10 10:50:46 [] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-08-10 10:50:46 [] INFO  c.e.s.StudentManagementApplication - Started StudentManagementApplication in 2.494 seconds (process running for 2.735)
+2026-08-10 10:50:59 [] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-10 10:50:59 [] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-08-10 10:50:59 [] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-08-10 10:50:59 [07F61657] INFO  c.e.s.Security.JwtAuthFilter - === JwtAuthFilter TRIGGERED for: /auth/register
+2026-08-10 10:50:59 [07F61657] INFO  c.e.s.Security.JwtAuthFilter - === Authorization header: null
+2026-08-10 10:50:59 [07F61657] INFO  c.e.s.Security.JwtAuthFilter - === No valid Bearer header, skipping auth
+2026-08-10 10:51:09 [28BCDED1] INFO  c.e.s.Security.JwtAuthFilter - === JwtAuthFilter TRIGGERED for: /auth/login
+2026-08-10 10:51:09 [28BCDED1] INFO  c.e.s.Security.JwtAuthFilter - === Authorization header: null
+2026-08-10 10:51:09 [28BCDED1] INFO  c.e.s.Security.JwtAuthFilter - === No valid Bearer header, skipping auth
+2026-08-10 10:51:16 [2AF49559] INFO  c.e.s.Security.JwtAuthFilter - === JwtAuthFilter TRIGGERED for: /test/protected
+2026-08-10 10:51:16 [2AF49559] INFO  c.e.s.Security.JwtAuthFilter - === Authorization header: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmcmVzaHVzZXI4Iiwicm9sZSI6IkFkbWluIiwiaWF0IjoxNzg2MzMzODcwLCJleHAiOjE3ODYzMzc0NzB9.CesEDEsYQ14En9NBpYRzgcZOZv14c0z2my8WH-GkSj0
+2026-08-10 10:51:16 [2AF49559] INFO  c.e.s.Security.JwtAuthFilter - === Extracted username: freshuser8
+2026-08-10 10:51:16 [2AF49559] INFO  c.e.s.Security.JwtAuthFilter - === Loaded userDetails: freshuser8
+2026-08-10 10:51:16 [2AF49559] INFO  c.e.s.Security.JwtAuthFilter - === Token valid? true
+2026-08-10 10:51:16 [2AF49559] INFO  c.e.s.Security.JwtAuthFilter - === Authentication SET in context
+2026-08-10 10:51:25 [51824C4C] INFO  c.e.s.Security.JwtAuthFilter - === JwtAuthFilter TRIGGERED for: /student/getAllStudents
+2026-08-10 10:51:25 [51824C4C] INFO  c.e.s.Security.JwtAuthFilter - === Authorization header: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmcmVzaHVzZXI4Iiwicm9sZSI6IkFkbWluIiwiaWF0IjoxNzg2MzMzODcwLCJleHAiOjE3ODYzMzc0NzB9.CesEDEsYQ14En9NBpYRzgcZOZv14c0z2my8WH-GkSj0
+2026-08-10 10:51:25 [51824C4C] INFO  c.e.s.Security.JwtAuthFilter - === Extracted username: freshuser8
+2026-08-10 10:51:25 [51824C4C] INFO  c.e.s.Security.JwtAuthFilter - === Loaded userDetails: freshuser8
+2026-08-10 10:51:25 [51824C4C] INFO  c.e.s.Security.JwtAuthFilter - === Token valid? true
+2026-08-10 10:51:25 [51824C4C] INFO  c.e.s.Security.JwtAuthFilter - === Authentication SET in context
+2026-08-10 10:52:07 [586F71EC] INFO  c.e.s.Security.JwtAuthFilter - === JwtAuthFilter TRIGGERED for: /student/getStudentById
+2026-08-10 10:52:07 [586F71EC] INFO  c.e.s.Security.JwtAuthFilter - === Authorization header: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJmcmVzaHVzZXI4Iiwicm9sZSI6IkFkbWluIiwiaWF0IjoxNzg2MjA2NDQ5LCJleHAiOjE3ODYyMTAwNDl9.hQj27cyDlTKmbcmnVVypvu2fZxxa4CfAwzovEblS_ingNA_iFeoUaLBJkOUTagG-1QfwOJlhhqNIHx2i7P8uNA
+2026-08-10 10:52:11 [8F8EAFED] INFO  c.e.s.Security.JwtAuthFilter - === JwtAuthFilter TRIGGERED for: /student/getStudentById
+2026-08-10 10:52:11 [8F8EAFED] INFO  c.e.s.Security.JwtAuthFilter - === Authorization header: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJmcmVzaHVzZXI4Iiwicm9sZSI6IkFkbWluIiwiaWF0IjoxNzg2MjA2NDQ5LCJleHAiOjE3ODYyMTAwNDl9.hQj27cyDlTKmbcmnVVypvu2fZxxa4CfAwzovEblS_ingNA_iFeoUaLBJkOUTagG-1QfwOJlhhqNIHx2i7P8uNA
+2026-08-10 10:54:08 [CE3D743F] INFO  c.e.s.Security.JwtAuthFilter - === JwtAuthFilter TRIGGERED for: /student/create
+2026-08-10 10:54:08 [CE3D743F] INFO  c.e.s.Security.JwtAuthFilter - === Authorization header: null
+2026-08-10 10:54:08 [CE3D743F] INFO  c.e.s.Security.JwtAuthFilter - === No valid Bearer header, skipping auth
+2026-08-10 10:54:55 [7B1E9D28] INFO  c.e.s.Security.JwtAuthFilter - === JwtAuthFilter TRIGGERED for: /student/create
+2026-08-10 10:54:55 [7B1E9D28] INFO  c.e.s.Security.JwtAuthFilter - === Authorization header: null
+2026-08-10 10:54:55 [7B1E9D28] INFO  c.e.s.Security.JwtAuthFilter - === No valid Bearer header, skipping auth
+2026-08-10 10:55:49 [96CF9C97] INFO  c.e.s.Security.JwtAuthFilter - === JwtAuthFilter TRIGGERED for: /student/create
+2026-08-10 10:55:49 [96CF9C97] INFO  c.e.s.Security.JwtAuthFilter - === Authorization header: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmcmVzaHVzZXI4Iiwicm9sZSI6IkFkbWluIiwiaWF0IjoxNzg2MzMzODcwLCJleHAiOjE3ODYzMzc0NzB9.CesEDEsYQ14En9NBpYRzgcZOZv14c0z2my8WH-GkSj0
+2026-08-10 10:55:49 [96CF9C97] INFO  c.e.s.Security.JwtAuthFilter - === Extracted username: freshuser8
+2026-08-10 10:55:49 [96CF9C97] INFO  c.e.s.Security.JwtAuthFilter - === Loaded userDetails: freshuser8
+2026-08-10 10:55:49 [96CF9C97] INFO  c.e.s.Security.JwtAuthFilter - === Token valid? true
+2026-08-10 10:55:49 [96CF9C97] INFO  c.e.s.Security.JwtAuthFilter - === Authentication SET in context

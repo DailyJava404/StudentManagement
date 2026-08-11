@@ -1,4 +1,4 @@
-package com.example.studentsmanagement.Logger;
+package com.example.studentsmanagement.Filter;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
@@ -27,18 +27,11 @@ public class RequestLoggingFilter extends OncePerRequestFilter {
             String requestId = UUID.randomUUID().toString().substring(0, 8).toUpperCase();
             MDC.put("requestId", requestId);
             MDC.put("endpoint", endpoint);
-            logger.info("Request: {} {}", request.getMethod(), request.getRequestURI());
             filterChain.doFilter(request, response);
         } catch (Exception exception) {
             logger.error("Request failed", exception);
             throw exception;
         } finally {
-            logger.info(
-                    "Response: {} {} status={}",
-                    request.getMethod(),
-                    request.getRequestURI(),
-                    response.getStatus()
-            );
             MDC.remove("requestId");
         }
     }

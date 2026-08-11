@@ -6,7 +6,7 @@ import com.example.studentsmanagement.Model.Response.JsonPlaceholderResponse;
 
 import java.util.List;
 
-public interface IJsonPlaceholder {
+public interface IJsonPlaceholderService {
     ApiResponse<List<JsonPlaceholderResponse>> getUsers();
     ApiResponse<JsonPlaceholderResponse> createUser(JsonPlaceholderRequest request);
 }

@@ -2,81 +2,113 @@ package com.example.studentsmanagement.Service;
 
 import com.example.studentsmanagement.Entity.StudentInfo;
 import com.example.studentsmanagement.Model.Request.DeleteRequest;
+import com.example.studentsmanagement.Model.Request.StudentIdRequest;
+import com.example.studentsmanagement.Model.Request.StudentRequest;
 import com.example.studentsmanagement.Model.Response.ApiResponse;
-import com.example.studentsmanagement.Interface.IStudentManagementService;
+import com.example.studentsmanagement.Interface.IStudentService;
+import com.example.studentsmanagement.Model.Response.StudentResponse;
 import com.example.studentsmanagement.Repository.StudentRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
-public class StudentManagementService implements IStudentManagementService {
+public class StudentService implements IStudentService {
 
-    private final StudentRepository _studentRepository;
-    public StudentManagementService(StudentRepository studentRepository) {
-        _studentRepository = studentRepository;
+    private final StudentRepository studentRepository;
+    public StudentService(StudentRepository studentRepository) {
+        this.studentRepository = studentRepository;
     }
 
     @Override
-    public ApiResponse<Void> createStudent(StudentInfo studentInfo) {
+    public ApiResponse<Void> createStudent(StudentRequest request) {
         try {
-            _studentRepository.save(studentInfo);
+            boolean exists = studentRepository
+                    .existsByFirstNameIgnoreCase(request.getFirstName(), request.getLastName());
+
+            if (exists) {
+                return ApiResponse.fail(
+                        409,
+                        "A student with this name already exists"
+                );
+            }
+            StudentInfo studentInfo = new StudentInfo();
+            studentInfo.setFirstName(request.getFirstName());
+            studentInfo.setLastName(request.getLastName());
+            studentInfo.setGender(request.getGender());
+            studentInfo.setEmail(request.getEmail());
+            studentInfo.setPhone(request.getPhone());
+            studentInfo.setAddress(request.getAddress());
+            studentInfo.setDateOfBirth(request.getDateOfBirth());
+            studentRepository.save(studentInfo);
             return ApiResponse.success("Student created");
-        }
-        catch (Exception e) {
-            return ApiResponse.fail(500,"Failed to create student");
+        } catch (Exception e) {
+            return ApiResponse.fail(500, "Failed to create student");
         }
     }
 
     @Override
-    public ApiResponse<List<StudentInfo>> getAllStudents() {
-        List<StudentInfo> getAllStudents = _studentRepository.findAll();
+    public ApiResponse<List<StudentResponse>> getAllStudents() {
+        List<StudentResponse> getAllStudents = studentRepository.findAll().stream()
+                .map(this::toResponse)
+                .toList();
         return ApiResponse.success(getAllStudents);
     }
 
     @Override
-    public ApiResponse<StudentInfo> getStudentById(Long id) {
-        Optional<StudentInfo> getStudentBy = _studentRepository.findById(id);
-        return getStudentBy.map(ApiResponse::success).orElseGet(() -> ApiResponse.fail(500, "Student not found"));
+    public ApiResponse<StudentResponse> getStudentById(StudentIdRequest request) {
+        return studentRepository.findById(request.studentId())
+                .map(student -> ApiResponse.success(toResponse(student)))
+                .orElseGet(() -> ApiResponse.fail(404, "Student not found"));
     }
 
     @Override
-    public ApiResponse<Void> updateStudent(StudentInfo studentInfo) {
+    public ApiResponse<Void> updateStudent(StudentRequest request) {
         try {
-            StudentInfo existing = _studentRepository.findById(studentInfo.getStudentId())
-                    .orElse(null);
+            StudentInfo existing = studentRepository.findById(request.getStudentId()).orElse(null);
             if (existing == null) {
-                return ApiResponse.fail(500, "Student not found");
+                return ApiResponse.fail(404, "Student not found");
             }
-
-            existing.setFirstName(studentInfo.getFirstName());
-            existing.setLastName(studentInfo.getLastName());
-            existing.setDateOfBirth(studentInfo.getDateOfBirth());
-            existing.setGender(studentInfo.getGender());
-            existing.setEmail(studentInfo.getEmail());
-            existing.setPhone(studentInfo.getPhone());
-            existing.setAddress(studentInfo.getAddress());
-            _studentRepository.save(existing);
-            return ApiResponse.success("Student updated successfully");
+            existing.setFirstName(request.getFirstName());
+            existing.setLastName(request.getLastName());
+            existing.setGender(request.getGender());
+            existing.setEmail(request.getEmail());
+            existing.setPhone(request.getPhone());
+            existing.setAddress(request.getAddress());
+            existing.setDateOfBirth(request.getDateOfBirth());
+            studentRepository.save(existing);
+            return ApiResponse.success("Student updated");
+        } catch (Exception e) {
+            return ApiResponse.fail(500, "Failed to update student");
         }
-        catch (Exception e) {
-            return ApiResponse.fail(500,"Failed to update student");
-        }
-
     }
 
     @Override
     public ApiResponse<Void> deleteStudent(DeleteRequest studentId) {
         try {
-            if (!_studentRepository.existsById(studentId.getStudentId())) {
-                return ApiResponse.fail(500, "Student not found");
+            if (!studentRepository.existsById(studentId.studentId())) {
+                return ApiResponse.fail(404, "Student not found");
             }
-            _studentRepository.deleteById(studentId.getStudentId());
+            studentRepository.deleteById(studentId.studentId());
             return ApiResponse.success("Student deleted successfully");
         }
         catch (Exception e) {
             return ApiResponse.fail(500,"Failed to delete student");
         }
+    }
+
+    private StudentResponse toResponse(StudentInfo student) {
+        StudentResponse response = new StudentResponse();
+
+        response.setStudentId(student.getStudentId());
+        response.setFirstName(student.getFirstName());
+        response.setLastName(student.getLastName());
+        response.setDateOfBirth(student.getDateOfBirth());
+        response.setGender(student.getGender());
+        response.setEmail(student.getEmail());
+        response.setPhone(student.getPhone());
+        response.setAddress(student.getAddress());
+
+        return response;
     }
 }

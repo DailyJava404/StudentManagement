@@ -1,21 +1,22 @@
 package com.example.studentsmanagement.Interface;
 
-import com.example.studentsmanagement.Entity.StudentInfo;
 import com.example.studentsmanagement.Model.Request.DeleteRequest;
+import com.example.studentsmanagement.Model.Request.StudentIdRequest;
+import com.example.studentsmanagement.Model.Request.StudentRequest;
 import com.example.studentsmanagement.Model.Response.ApiResponse;
 import com.example.studentsmanagement.Model.Response.StudentResponse;
 
 import java.util.List;
 
-public interface IStudentManagementService {
+public interface IStudentService {
 
-    ApiResponse<Void> createStudent(StudentInfo studentInfo);
+    ApiResponse<Void> createStudent(StudentRequest request);
 
-    ApiResponse<List<StudentInfo>>  getAllStudents();
+    ApiResponse<List<StudentResponse>>  getAllStudents();
 
-    ApiResponse<StudentInfo>  getStudentById(Long id);
+    ApiResponse<StudentResponse>  getStudentById(StudentIdRequest id);
 
-    ApiResponse<Void>  updateStudent(StudentInfo studentInfo);
+    ApiResponse<Void>  updateStudent(StudentRequest request);
 
     ApiResponse<Void>  deleteStudent(DeleteRequest studentId);
 

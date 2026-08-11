@@ -1,0 +1,195 @@
+2026-08-10 13:40:29 [] INFO  c.e.s.StudentManagementApplication - Starting StudentManagementApplication using Java 26.0.2 with PID 80368 (/Users/ewent/Documents/Programmer/Java (Spring boot)/StudentManagement/StudentManagement/target/classes started by ewent in /Users/ewent/Documents/Programmer/Java (Spring boot)/StudentManagement/StudentManagement)
+2026-08-10 13:40:29 [] INFO  c.e.s.StudentManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2026-08-10 13:40:29 [] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.1.0.Final
+2026-08-10 13:40:30 [] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-10 13:40:30 [] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 27 ms. Found 2 JPA repository interfaces.
+2026-08-10 13:40:30 [] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=2c824a52-aa8f-37f0-8dd3-b3b415dca6c7
+2026-08-10 13:40:30 [] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-08-10 13:40:30 [] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-08-10 13:40:30 [] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-08-10 13:40:30 [] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-10 13:40:30 [] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 692 ms
+2026-08-10 13:40:30 [] INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-10 13:40:30 [] INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-08-10 13:40:31 [] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-10 13:40:31 [] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-08-10 13:40:31 [] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: 990c93bd-3c62-49b4-a4ba-a9af0e94f24b
+2026-08-10 13:40:31 [] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-08-10 13:40:31 [] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlserver://localhost:1433;connectRetryInterval=10;connectRetryCount=1;maxResultBuffer=-1;sendTemporalDataTypesAsStringForBulkCopy=true;delayLoadingLobs=true;useFmtOnly=false;cacheBulkCopyMetadata=false;useBulkCopyForBatchInsert=false;cancelQueryTimeout=-1;sslProtocol=TLS;calcBigDecimalPrecision=false;useDefaultJaasConfig=false;jaasConfigurationName=SQLJDBCDriver;statementPoolingCacheSize=0;serverPreparedStatementDiscardThreshold=10;enablePrepareOnFirstPreparedStatementCall=false;fips=false;socketTimeout=0;authentication=NotSpecified;authenticationScheme=nativeAuthentication;xopenStates=false;datetimeParameterType=datetime2;sendTimeAsDatetime=true;replication=false;trustStoreType=JKS;trustServerCertificate=true;TransparentNetworkIPResolution=true;iPAddressPreference=IPv4First;serverNameAsACE=false;sendStringParametersAsUnicode=true;selectMethod=direct;responseBuffering=adaptive;queryTimeout=-1;packetSize=8000;multiSubnetFailover=false;loginTimeout=30;lockTimeout=-1;lastUpdateCount=true;useFlexibleCallableStatements=true;useDefaultGSSCredential=false;prepareMethod=prepexec;encrypt=true;disableStatementPooling=true;databaseName=students_management;columnEncryptionSetting=Disabled;applicationName=Microsoft JDBC Driver for SQL Server;applicationIntent=readwrite;]
+	Database driver: Microsoft JDBC Driver 12.8 for SQL Server
+	Database dialect: SQLServerDialect
+	Database version: 16.0
+	Default catalog/schema: students_management/dbo
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 128
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-10 13:40:32 [] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-10 13:40:32 [] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-10 13:40:32 [] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-10 13:40:32 [] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2026-08-10 13:40:32 [] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-08-10 13:40:32 [] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-08-10 13:40:32 [] INFO  c.e.s.StudentManagementApplication - Started StudentManagementApplication in 3.104 seconds (process running for 3.566)
+2026-08-10 13:41:03 [] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-10 13:41:03 [] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-08-10 13:41:03 [] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2026-08-10 13:41:03 [141A801E] INFO  c.e.s.Security.JwtAuthFilter - === JwtAuthFilter TRIGGERED for: /external/user
+2026-08-10 13:41:03 [141A801E] INFO  c.e.s.Security.JwtAuthFilter - === Authorization header: null
+2026-08-10 13:41:03 [141A801E] INFO  c.e.s.Security.JwtAuthFilter - === No valid Bearer header, skipping auth
+2026-08-10 13:41:12 [0E31B86F] INFO  c.e.s.Security.JwtAuthFilter - === JwtAuthFilter TRIGGERED for: /test/protected
+2026-08-10 13:41:12 [0E31B86F] INFO  c.e.s.Security.JwtAuthFilter - === Authorization header: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmcmVzaHVzZXI4Iiwicm9sZSI6IkFkbWluIiwiaWF0IjoxNzg2MzMzODcwLCJleHAiOjE3ODYzMzc0NzB9.CesEDEsYQ14En9NBpYRzgcZOZv14c0z2my8WH-GkSj0
+2026-08-10 13:41:17 [5FC6BB04] INFO  c.e.s.Security.JwtAuthFilter - === JwtAuthFilter TRIGGERED for: /auth/login
+2026-08-10 13:41:17 [5FC6BB04] INFO  c.e.s.Security.JwtAuthFilter - === Authorization header: null
+2026-08-10 13:41:17 [5FC6BB04] INFO  c.e.s.Security.JwtAuthFilter - === No valid Bearer header, skipping auth
+2026-08-10 13:41:27 [299C3D3C] INFO  c.e.s.Security.JwtAuthFilter - === JwtAuthFilter TRIGGERED for: /external/user
+2026-08-10 13:41:27 [299C3D3C] INFO  c.e.s.Security.JwtAuthFilter - === Authorization header: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmcmVzaHVzZXIxMCIsInJvbGUiOiJTdHVkZW50IiwiaWF0IjoxNzg2MzQ0MDc3LCJleHAiOjE3ODYzNDc2Nzd9.PLnmtMlRwZPxiq6en-gLoOBr_vSZWaGhURYh-3B5pHU
+2026-08-10 13:41:27 [299C3D3C] INFO  c.e.s.Security.JwtAuthFilter - === Extracted username: freshuser10
+2026-08-10 13:41:27 [299C3D3C] INFO  c.e.s.Security.JwtAuthFilter - === Loaded userDetails: freshuser10
+2026-08-10 13:41:27 [299C3D3C] INFO  c.e.s.Security.JwtAuthFilter - === Token valid? true
+2026-08-10 13:41:27 [299C3D3C] INFO  c.e.s.Security.JwtAuthFilter - === Authentication SET in context
+2026-08-10 13:43:45 [89FC7290] INFO  c.e.s.Security.JwtAuthFilter - === JwtAuthFilter TRIGGERED for: /external/users
+2026-08-10 13:43:45 [89FC7290] INFO  c.e.s.Security.JwtAuthFilter - === Authorization header: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmcmVzaHVzZXIxMCIsInJvbGUiOiJTdHVkZW50IiwiaWF0IjoxNzg2MzQ0MDc3LCJleHAiOjE3ODYzNDc2Nzd9.PLnmtMlRwZPxiq6en-gLoOBr_vSZWaGhURYh-3B5pHU
+2026-08-10 13:43:45 [89FC7290] INFO  c.e.s.Security.JwtAuthFilter - === Extracted username: freshuser10
+2026-08-10 13:43:45 [89FC7290] INFO  c.e.s.Security.JwtAuthFilter - === Loaded userDetails: freshuser10
+2026-08-10 13:43:45 [89FC7290] INFO  c.e.s.Security.JwtAuthFilter - === Token valid? true
+2026-08-10 13:43:45 [89FC7290] INFO  c.e.s.Security.JwtAuthFilter - === Authentication SET in context
+2026-08-10 13:43:52 [89FC7290] INFO  c.e.s.Service.JsonPlaceholderService - Calling Provider to get users
+2026-08-10 13:43:58 [89FC7290] INFO  c.e.s.Service.JsonPlaceholderService - Provider response: [JsonPlaceholderResponse[id=1, name=Leanne Graham, username=Bret, email=Sincere@april.biz, address=Address[street=Kulas Light, suite=Apt. 556, city=Gwenborough, zipcode=92998-3874, geo=Geo[lat=-37.3159, lng=81.1496]], phone=1-770-736-8031 x56442, website=hildegard.org, company=Company[name=Romaguera-Crona, catchPhrase=Multi-layered client-server neural-net, bs=harness real-time e-markets]], JsonPlaceholderResponse[id=2, name=Ervin Howell, username=Antonette, email=Shanna@melissa.tv, address=Address[street=Victor Plains, suite=Suite 879, city=Wisokyburgh, zipcode=90566-7771, geo=Geo[lat=-43.9509, lng=-34.4618]], phone=010-692-6593 x09125, website=anastasia.net, company=Company[name=Deckow-Crist, catchPhrase=Proactive didactic contingency, bs=synergize scalable supply-chains]], JsonPlaceholderResponse[id=3, name=Clementine Bauch, username=Samantha, email=Nathan@yesenia.net, address=Address[street=Douglas Extension, suite=Suite 847, city=McKenziehaven, zipcode=59590-4157, geo=Geo[lat=-68.6102, lng=-47.0653]], phone=1-463-123-4447, website=ramiro.info, company=Company[name=Romaguera-Jacobson, catchPhrase=Face to face bifurcated interface, bs=e-enable strategic applications]], JsonPlaceholderResponse[id=4, name=Patricia Lebsack, username=Karianne, email=Julianne.OConner@kory.org, address=Address[street=Hoeger Mall, suite=Apt. 692, city=South Elvis, zipcode=53919-4257, geo=Geo[lat=29.4572, lng=-164.2990]], phone=493-170-9623 x156, website=kale.biz, company=Company[name=Robel-Corkery, catchPhrase=Multi-tiered zero tolerance productivity, bs=transition cutting-edge web services]], JsonPlaceholderResponse[id=5, name=Chelsey Dietrich, username=Kamren, email=Lucio_Hettinger@annie.ca, address=Address[street=Skiles Walks, suite=Suite 351, city=Roscoeview, zipcode=33263, geo=Geo[lat=-31.8129, lng=62.5342]], phone=(254)954-1289, website=demarco.info, company=Company[name=Keebler LLC, catchPhrase=User-centric fault-tolerant solution, bs=revolutionize end-to-end systems]], JsonPlaceholderResponse[id=6, name=Mrs. Dennis Schulist, username=Leopoldo_Corkery, email=Karley_Dach@jasper.info, address=Address[street=Norberto Crossing, suite=Apt. 950, city=South Christy, zipcode=23505-1337, geo=Geo[lat=-71.4197, lng=71.7478]], phone=1-477-935-8478 x6430, website=ola.org, company=Company[name=Considine-Lockman, catchPhrase=Synchronised bottom-line interface, bs=e-enable innovative applications]], JsonPlaceholderResponse[id=7, name=Kurtis Weissnat, username=Elwyn.Skiles, email=Telly.Hoeger@billy.biz, address=Address[street=Rex Trail, suite=Suite 280, city=Howemouth, zipcode=58804-1099, geo=Geo[lat=24.8918, lng=21.8984]], phone=210.067.6132, website=elvis.io, company=Company[name=Johns Group, catchPhrase=Configurable multimedia task-force, bs=generate enterprise e-tailers]], JsonPlaceholderResponse[id=8, name=Nicholas Runolfsdottir V, username=Maxime_Nienow, email=Sherwood@rosamond.me, address=Address[street=Ellsworth Summit, suite=Suite 729, city=Aliyaview, zipcode=45169, geo=Geo[lat=-14.3990, lng=-120.7677]], phone=586.493.6943 x140, website=jacynthe.com, company=Company[name=Abernathy Group, catchPhrase=Implemented secondary concept, bs=e-enable extensible e-tailers]], JsonPlaceholderResponse[id=9, name=Glenna Reichert, username=Delphine, email=Chaim_McDermott@dana.io, address=Address[street=Dayna Park, suite=Suite 449, city=Bartholomebury, zipcode=76495-3109, geo=Geo[lat=24.6463, lng=-168.8889]], phone=(775)976-6794 x41206, website=conrad.com, company=Company[name=Yost and Sons, catchPhrase=Switchable contextually-based project, bs=aggregate real-time technologies]], JsonPlaceholderResponse[id=10, name=Clementina DuBuque, username=Moriah.Stanton, email=Rey.Padberg@karina.biz, address=Address[street=Kattie Turnpike, suite=Suite 198, city=Lebsackbury, zipcode=31428-2261, geo=Geo[lat=-38.2386, lng=57.2232]], phone=024-648-3804, website=ambrose.net, company=Company[name=Hoeger LLC, catchPhrase=Centralized empowering task-force, bs=target end-to-end models]]]
+2026-08-10 13:44:29 [10204F47] INFO  c.e.s.Security.JwtAuthFilter - === JwtAuthFilter TRIGGERED for: /apple-touch-icon.png
+2026-08-10 13:44:29 [B9D14A69] INFO  c.e.s.Security.JwtAuthFilter - === JwtAuthFilter TRIGGERED for: /favicon.ico
+2026-08-10 13:44:29 [C61F644A] INFO  c.e.s.Security.JwtAuthFilter - === JwtAuthFilter TRIGGERED for: /apple-touch-icon-precomposed.png
+2026-08-10 13:44:29 [B9D14A69] INFO  c.e.s.Security.JwtAuthFilter - === Authorization header: null
+2026-08-10 13:44:29 [10204F47] INFO  c.e.s.Security.JwtAuthFilter - === Authorization header: null
+2026-08-10 13:44:29 [C61F644A] INFO  c.e.s.Security.JwtAuthFilter - === Authorization header: null
+2026-08-10 13:44:29 [10204F47] INFO  c.e.s.Security.JwtAuthFilter - === No valid Bearer header, skipping auth
+2026-08-10 13:44:29 [B9D14A69] INFO  c.e.s.Security.JwtAuthFilter - === No valid Bearer header, skipping auth
+2026-08-10 13:44:29 [C61F644A] INFO  c.e.s.Security.JwtAuthFilter - === No valid Bearer header, skipping auth
+2026-08-10 13:44:29 [BFC372E8] INFO  c.e.s.Security.JwtAuthFilter - === JwtAuthFilter TRIGGERED for: /external/users
+2026-08-10 13:44:29 [BFC372E8] INFO  c.e.s.Security.JwtAuthFilter - === Authorization header: null
+2026-08-10 13:44:29 [BFC372E8] INFO  c.e.s.Security.JwtAuthFilter - === No valid Bearer header, skipping auth
+2026-08-10 13:44:29 [E683CCFF] INFO  c.e.s.Security.JwtAuthFilter - === JwtAuthFilter TRIGGERED for: /external/users
+2026-08-10 13:44:29 [E683CCFF] INFO  c.e.s.Security.JwtAuthFilter - === Authorization header: null
+2026-08-10 13:44:29 [E683CCFF] INFO  c.e.s.Security.JwtAuthFilter - === No valid Bearer header, skipping auth
+2026-08-10 13:50:18 [] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-10 13:50:18 [] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-08-10 13:50:18 [] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-10 13:50:18 [] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-08-10 13:50:18 [] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-08-10 13:50:20 [] INFO  c.e.s.StudentManagementApplication - Starting StudentManagementApplication using Java 26.0.2 with PID 80728 (/Users/ewent/Documents/Programmer/Java (Spring boot)/StudentManagement/StudentManagement/target/classes started by ewent in /Users/ewent/Documents/Programmer/Java (Spring boot)/StudentManagement/StudentManagement)
+2026-08-10 13:50:20 [] INFO  c.e.s.StudentManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2026-08-10 13:50:20 [] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.1.0.Final
+2026-08-10 13:50:20 [] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-10 13:50:20 [] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 18 ms. Found 2 JPA repository interfaces.
+2026-08-10 13:50:21 [] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=ac225581-88db-3e46-9b68-03295223f873
+2026-08-10 13:50:21 [] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-08-10 13:50:21 [] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-08-10 13:50:21 [] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-08-10 13:50:21 [] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-10 13:50:21 [] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 611 ms
+2026-08-10 13:50:21 [] INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-10 13:50:21 [] INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-08-10 13:50:21 [] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-10 13:50:21 [] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-08-10 13:50:21 [] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: 616e91cd-1c6d-418c-8e9d-121244e86abc
+2026-08-10 13:50:21 [] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-08-10 13:50:21 [] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlserver://localhost:1433;connectRetryInterval=10;connectRetryCount=1;maxResultBuffer=-1;sendTemporalDataTypesAsStringForBulkCopy=true;delayLoadingLobs=true;useFmtOnly=false;cacheBulkCopyMetadata=false;useBulkCopyForBatchInsert=false;cancelQueryTimeout=-1;sslProtocol=TLS;calcBigDecimalPrecision=false;useDefaultJaasConfig=false;jaasConfigurationName=SQLJDBCDriver;statementPoolingCacheSize=0;serverPreparedStatementDiscardThreshold=10;enablePrepareOnFirstPreparedStatementCall=false;fips=false;socketTimeout=0;authentication=NotSpecified;authenticationScheme=nativeAuthentication;xopenStates=false;datetimeParameterType=datetime2;sendTimeAsDatetime=true;replication=false;trustStoreType=JKS;trustServerCertificate=true;TransparentNetworkIPResolution=true;iPAddressPreference=IPv4First;serverNameAsACE=false;sendStringParametersAsUnicode=true;selectMethod=direct;responseBuffering=adaptive;queryTimeout=-1;packetSize=8000;multiSubnetFailover=false;loginTimeout=30;lockTimeout=-1;lastUpdateCount=true;useFlexibleCallableStatements=true;useDefaultGSSCredential=false;prepareMethod=prepexec;encrypt=true;disableStatementPooling=true;databaseName=students_management;columnEncryptionSetting=Disabled;applicationName=Microsoft JDBC Driver for SQL Server;applicationIntent=readwrite;]
+	Database driver: Microsoft JDBC Driver 12.8 for SQL Server
+	Database dialect: SQLServerDialect
+	Database version: 16.0
+	Default catalog/schema: students_management/dbo
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 128
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-10 13:50:22 [] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-10 13:50:22 [] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-10 13:50:22 [] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-10 13:50:22 [] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2026-08-10 13:50:22 [] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-08-10 13:50:22 [] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-08-10 13:50:22 [] INFO  c.e.s.StudentManagementApplication - Started StudentManagementApplication in 2.767 seconds (process running for 3.311)
+2026-08-10 13:50:56 [] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-10 13:50:56 [] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-08-10 13:50:56 [] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-10 13:50:56 [] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-08-10 13:50:56 [] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-08-10 13:50:57 [] INFO  c.e.s.StudentManagementApplication - Starting StudentManagementApplication using Java 26.0.2 with PID 80744 (/Users/ewent/Documents/Programmer/Java (Spring boot)/StudentManagement/StudentManagement/target/classes started by ewent in /Users/ewent/Documents/Programmer/Java (Spring boot)/StudentManagement/StudentManagement)
+2026-08-10 13:50:57 [] INFO  c.e.s.StudentManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2026-08-10 13:50:57 [] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.1.0.Final
+2026-08-10 13:50:57 [] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-10 13:50:57 [] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 19 ms. Found 2 JPA repository interfaces.
+2026-08-10 13:50:58 [] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=ac225581-88db-3e46-9b68-03295223f873
+2026-08-10 13:50:58 [] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-08-10 13:50:58 [] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-08-10 13:50:58 [] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-08-10 13:50:58 [] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-10 13:50:58 [] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 633 ms
+2026-08-10 13:50:58 [] INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-10 13:50:58 [] INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-08-10 13:50:58 [] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-10 13:50:58 [] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-08-10 13:50:58 [] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: fe667c27-ca98-4812-bca8-8061f1268b2b
+2026-08-10 13:50:58 [] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-08-10 13:50:58 [] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlserver://localhost:1433;connectRetryInterval=10;connectRetryCount=1;maxResultBuffer=-1;sendTemporalDataTypesAsStringForBulkCopy=true;delayLoadingLobs=true;useFmtOnly=false;cacheBulkCopyMetadata=false;useBulkCopyForBatchInsert=false;cancelQueryTimeout=-1;sslProtocol=TLS;calcBigDecimalPrecision=false;useDefaultJaasConfig=false;jaasConfigurationName=SQLJDBCDriver;statementPoolingCacheSize=0;serverPreparedStatementDiscardThreshold=10;enablePrepareOnFirstPreparedStatementCall=false;fips=false;socketTimeout=0;authentication=NotSpecified;authenticationScheme=nativeAuthentication;xopenStates=false;datetimeParameterType=datetime2;sendTimeAsDatetime=true;replication=false;trustStoreType=JKS;trustServerCertificate=true;TransparentNetworkIPResolution=true;iPAddressPreference=IPv4First;serverNameAsACE=false;sendStringParametersAsUnicode=true;selectMethod=direct;responseBuffering=adaptive;queryTimeout=-1;packetSize=8000;multiSubnetFailover=false;loginTimeout=30;lockTimeout=-1;lastUpdateCount=true;useFlexibleCallableStatements=true;useDefaultGSSCredential=false;prepareMethod=prepexec;encrypt=true;disableStatementPooling=true;databaseName=students_management;columnEncryptionSetting=Disabled;applicationName=Microsoft JDBC Driver for SQL Server;applicationIntent=readwrite;]
+	Database driver: Microsoft JDBC Driver 12.8 for SQL Server
+	Database dialect: SQLServerDialect
+	Database version: 16.0
+	Default catalog/schema: students_management/dbo
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 128
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-10 13:50:59 [] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-10 13:50:59 [] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-10 13:50:59 [] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-10 13:50:59 [] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2026-08-10 13:50:59 [] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-08-10 13:50:59 [] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-08-10 13:50:59 [] INFO  c.e.s.StudentManagementApplication - Started StudentManagementApplication in 2.634 seconds (process running for 3.073)
+2026-08-10 13:51:01 [] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-10 13:51:01 [] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-08-10 13:51:01 [] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-08-10 13:51:01 [923EFE9A] INFO  c.e.s.Security.JwtAuthFilter - === JwtAuthFilter TRIGGERED for: /external/users
+2026-08-10 13:51:01 [923EFE9A] INFO  c.e.s.Security.JwtAuthFilter - === Authorization header: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmcmVzaHVzZXIxMCIsInJvbGUiOiJTdHVkZW50IiwiaWF0IjoxNzg2MzQ0MDc3LCJleHAiOjE3ODYzNDc2Nzd9.PLnmtMlRwZPxiq6en-gLoOBr_vSZWaGhURYh-3B5pHU
+2026-08-10 13:51:01 [923EFE9A] INFO  c.e.s.Security.JwtAuthFilter - === Extracted username: freshuser10
+2026-08-10 13:51:01 [923EFE9A] INFO  c.e.s.Security.JwtAuthFilter - === Loaded userDetails: freshuser10
+2026-08-10 13:51:01 [923EFE9A] INFO  c.e.s.Security.JwtAuthFilter - === Token valid? true
+2026-08-10 13:51:01 [923EFE9A] INFO  c.e.s.Security.JwtAuthFilter - === Authentication SET in context
+2026-08-10 13:51:03 [923EFE9A] INFO  c.e.s.S.JsonPlaceholderServiceService - Calling Provider to get users
+2026-08-10 13:51:09 [923EFE9A] INFO  c.e.s.S.JsonPlaceholderServiceService - Provider response from get users: [{"id":1,"name":"Leanne Graham","username":"Bret","email":"Sincere@april.biz","address":{"street":"Kulas Light","suite":"Apt. 556","city":"Gwenborough","zipcode":"92998-3874","geo":{"lat":"-37.3159","lng":"81.1496"}},"phone":"1-770-736-8031 x56442","website":"hildegard.org","company":{"name":"Romaguera-Crona","catchPhrase":"Multi-layered client-server neural-net","bs":"harness real-time e-markets"}},{"id":2,"name":"Ervin Howell","username":"Antonette","email":"Shanna@melissa.tv","address":{"street":"Victor Plains","suite":"Suite 879","city":"Wisokyburgh","zipcode":"90566-7771","geo":{"lat":"-43.9509","lng":"-34.4618"}},"phone":"010-692-6593 x09125","website":"anastasia.net","company":{"name":"Deckow-Crist","catchPhrase":"Proactive didactic contingency","bs":"synergize scalable supply-chains"}},{"id":3,"name":"Clementine Bauch","username":"Samantha","email":"Nathan@yesenia.net","address":{"street":"Douglas Extension","suite":"Suite 847","city":"McKenziehaven","zipcode":"59590-4157","geo":{"lat":"-68.6102","lng":"-47.0653"}},"phone":"1-463-123-4447","website":"ramiro.info","company":{"name":"Romaguera-Jacobson","catchPhrase":"Face to face bifurcated interface","bs":"e-enable strategic applications"}},{"id":4,"name":"Patricia Lebsack","username":"Karianne","email":"Julianne.OConner@kory.org","address":{"street":"Hoeger Mall","suite":"Apt. 692","city":"South Elvis","zipcode":"53919-4257","geo":{"lat":"29.4572","lng":"-164.2990"}},"phone":"493-170-9623 x156","website":"kale.biz","company":{"name":"Robel-Corkery","catchPhrase":"Multi-tiered zero tolerance productivity","bs":"transition cutting-edge web services"}},{"id":5,"name":"Chelsey Dietrich","username":"Kamren","email":"Lucio_Hettinger@annie.ca","address":{"street":"Skiles Walks","suite":"Suite 351","city":"Roscoeview","zipcode":"33263","geo":{"lat":"-31.8129","lng":"62.5342"}},"phone":"(254)954-1289","website":"demarco.info","company":{"name":"Keebler LLC","catchPhrase":"User-centric fault-tolerant solution","bs":"revolutionize end-to-end systems"}},{"id":6,"name":"Mrs. Dennis Schulist","username":"Leopoldo_Corkery","email":"Karley_Dach@jasper.info","address":{"street":"Norberto Crossing","suite":"Apt. 950","city":"South Christy","zipcode":"23505-1337","geo":{"lat":"-71.4197","lng":"71.7478"}},"phone":"1-477-935-8478 x6430","website":"ola.org","company":{"name":"Considine-Lockman","catchPhrase":"Synchronised bottom-line interface","bs":"e-enable innovative applications"}},{"id":7,"name":"Kurtis Weissnat","username":"Elwyn.Skiles","email":"Telly.Hoeger@billy.biz","address":{"street":"Rex Trail","suite":"Suite 280","city":"Howemouth","zipcode":"58804-1099","geo":{"lat":"24.8918","lng":"21.8984"}},"phone":"210.067.6132","website":"elvis.io","company":{"name":"Johns Group","catchPhrase":"Configurable multimedia task-force","bs":"generate enterprise e-tailers"}},{"id":8,"name":"Nicholas Runolfsdottir V","username":"Maxime_Nienow","email":"Sherwood@rosamond.me","address":{"street":"Ellsworth Summit","suite":"Suite 729","city":"Aliyaview","zipcode":"45169","geo":{"lat":"-14.3990","lng":"-120.7677"}},"phone":"586.493.6943 x140","website":"jacynthe.com","company":{"name":"Abernathy Group","catchPhrase":"Implemented secondary concept","bs":"e-enable extensible e-tailers"}},{"id":9,"name":"Glenna Reichert","username":"Delphine","email":"Chaim_McDermott@dana.io","address":{"street":"Dayna Park","suite":"Suite 449","city":"Bartholomebury","zipcode":"76495-3109","geo":{"lat":"24.6463","lng":"-168.8889"}},"phone":"(775)976-6794 x41206","website":"conrad.com","company":{"name":"Yost and Sons","catchPhrase":"Switchable contextually-based project","bs":"aggregate real-time technologies"}},{"id":10,"name":"Clementina DuBuque","username":"Moriah.Stanton","email":"Rey.Padberg@karina.biz","address":{"street":"Kattie Turnpike","suite":"Suite 198","city":"Lebsackbury","zipcode":"31428-2261","geo":{"lat":"-38.2386","lng":"57.2232"}},"phone":"024-648-3804","website":"ambrose.net","company":{"name":"Hoeger LLC","catchPhrase":"Centralized empowering task-force","bs":"target end-to-end models"}}]
+2026-08-10 13:53:42 [2613BEF6] INFO  c.e.s.Security.JwtAuthFilter - === JwtAuthFilter TRIGGERED for: /apple-touch-icon.png
+2026-08-10 13:53:42 [D41E2CEF] INFO  c.e.s.Security.JwtAuthFilter - === JwtAuthFilter TRIGGERED for: /favicon.ico
+2026-08-10 13:53:42 [D4CD73E1] INFO  c.e.s.Security.JwtAuthFilter - === JwtAuthFilter TRIGGERED for: /apple-touch-icon-precomposed.png
+2026-08-10 13:53:42 [D4CD73E1] INFO  c.e.s.Security.JwtAuthFilter - === Authorization header: null
+2026-08-10 13:53:42 [2613BEF6] INFO  c.e.s.Security.JwtAuthFilter - === Authorization header: null
+2026-08-10 13:53:42 [D41E2CEF] INFO  c.e.s.Security.JwtAuthFilter - === Authorization header: null
+2026-08-10 13:53:42 [2613BEF6] INFO  c.e.s.Security.JwtAuthFilter - === No valid Bearer header, skipping auth
+2026-08-10 13:53:42 [D4CD73E1] INFO  c.e.s.Security.JwtAuthFilter - === No valid Bearer header, skipping auth
+2026-08-10 13:53:42 [D41E2CEF] INFO  c.e.s.Security.JwtAuthFilter - === No valid Bearer header, skipping auth
+2026-08-10 13:53:42 [FA6749A8] INFO  c.e.s.Security.JwtAuthFilter - === JwtAuthFilter TRIGGERED for: /external/users
+2026-08-10 13:53:42 [FA6749A8] INFO  c.e.s.Security.JwtAuthFilter - === Authorization header: null
+2026-08-10 13:53:42 [FA6749A8] INFO  c.e.s.Security.JwtAuthFilter - === No valid Bearer header, skipping auth
+2026-08-10 13:53:42 [9A593D0F] INFO  c.e.s.Security.JwtAuthFilter - === JwtAuthFilter TRIGGERED for: /external/users
+2026-08-10 13:53:42 [9A593D0F] INFO  c.e.s.Security.JwtAuthFilter - === Authorization header: null
+2026-08-10 13:53:42 [9A593D0F] INFO  c.e.s.Security.JwtAuthFilter - === No valid Bearer header, skipping auth
+2026-08-10 13:54:17 [3E2659AC] INFO  c.e.s.Security.JwtAuthFilter - === JwtAuthFilter TRIGGERED for: /external/users
+2026-08-10 13:54:17 [3E2659AC] INFO  c.e.s.Security.JwtAuthFilter - === Authorization header: null
+2026-08-10 13:54:17 [3E2659AC] INFO  c.e.s.Security.JwtAuthFilter - === No valid Bearer header, skipping auth
+2026-08-10 13:55:02 [53F6E2FE] INFO  c.e.s.Security.JwtAuthFilter - === JwtAuthFilter TRIGGERED for: /external/users
+2026-08-10 13:55:02 [53F6E2FE] INFO  c.e.s.Security.JwtAuthFilter - === Authorization header: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmcmVzaHVzZXIxMCIsInJvbGUiOiJTdHVkZW50IiwiaWF0IjoxNzg2MzQ0MDc3LCJleHAiOjE3ODYzNDc2Nzd9.PLnmtMlRwZPxiq6en-gLoOBr_vSZWaGhURYh-3B5pHU
+2026-08-10 13:55:02 [53F6E2FE] INFO  c.e.s.Security.JwtAuthFilter - === Extracted username: freshuser10
+2026-08-10 13:55:02 [53F6E2FE] INFO  c.e.s.Security.JwtAuthFilter - === Loaded userDetails: freshuser10
+2026-08-10 13:55:02 [53F6E2FE] INFO  c.e.s.Security.JwtAuthFilter - === Token valid? true
+2026-08-10 13:55:02 [53F6E2FE] INFO  c.e.s.Security.JwtAuthFilter - === Authentication SET in context
+2026-08-10 13:55:05 [53F6E2FE] INFO  c.e.s.S.JsonPlaceholderServiceService - Calling Provider to create users: com.example.studentsmanagement.Model.Request.JsonPlaceholderRequest@6963835
+2026-08-10 13:55:14 [53F6E2FE] INFO  c.e.s.S.JsonPlaceholderServiceService - Provider response: JsonPlaceholderResponse[id=11, name=John Doe1, username=johndoe1, email=john.doe1@example.com, address=null, phone=null, website=null, company=null]

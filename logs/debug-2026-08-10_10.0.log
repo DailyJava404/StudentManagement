@@ -1,0 +1,10 @@
+2026-08-10 10:07:26 [C03F88F7] DEBUG c.e.s.Service.AuthService - New user saved to DB: com.example.studentsmanagement.Entity.UserInfo@64dff7bd
+2026-08-10 10:09:29 [] DEBUG c.e.s.StudentManagementApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-08-10 10:09:31 [] DEBUG c.e.s.Logger.RequestLoggingFilter - Filter 'requestLoggingFilter' configured for use
+2026-08-10 10:09:31 [] DEBUG c.e.s.Security.JwtAuthFilter - Filter 'jwtAuthFilter' configured for use
+2026-08-10 10:49:27 [] DEBUG c.e.s.StudentManagementApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-08-10 10:49:29 [] DEBUG c.e.s.Logger.RequestLoggingFilter - Filter 'requestLoggingFilter' configured for use
+2026-08-10 10:49:29 [] DEBUG c.e.s.Security.JwtAuthFilter - Filter 'jwtAuthFilter' configured for use
+2026-08-10 10:50:44 [] DEBUG c.e.s.StudentManagementApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-08-10 10:50:45 [] DEBUG c.e.s.Logger.RequestLoggingFilter - Filter 'requestLoggingFilter' configured for use
+2026-08-10 10:50:45 [] DEBUG c.e.s.Security.JwtAuthFilter - Filter 'jwtAuthFilter' configured for use

@@ -2,56 +2,62 @@ package com.example.studentsmanagement.Controller;
 
 import com.example.studentsmanagement.Entity.StudentInfo;
 import com.example.studentsmanagement.Model.Request.DeleteRequest;
+import com.example.studentsmanagement.Model.Request.StudentIdRequest;
+import com.example.studentsmanagement.Model.Request.StudentRequest;
 import com.example.studentsmanagement.Model.Response.ApiResponse;
+import com.example.studentsmanagement.Interface.IStudentService;
 import com.example.studentsmanagement.Model.Response.StudentResponse;
-import com.example.studentsmanagement.Interface.IStudentManagementService;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Positive;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("/student")
-public class StudentsManagementController {
+public class StudentController {
 
-    private final IStudentManagementService _studentManagementService;
-    public StudentsManagementController(IStudentManagementService studentManagementService) {
+    private final IStudentService _studentManagementService;
+    public StudentController(IStudentService studentManagementService) {
         _studentManagementService = studentManagementService;
     }
 
-    @PreAuthorize("hasRole('Admin')")
     @PostMapping("/create")
-    public ResponseEntity<ApiResponse<Void>> createStudent(@RequestBody StudentInfo studentInfo)
+    public ResponseEntity<ApiResponse<Void>> createStudent(@Valid @RequestBody StudentRequest request)
     {
-        return ResponseEntity.ok(_studentManagementService.createStudent(studentInfo));
+        ApiResponse<Void> result = _studentManagementService.createStudent(request);
+        return ResponseEntity.status(result.statusCode()).body(result);
     }
 
     @GetMapping("/getAllStudents")
-    public ResponseEntity<ApiResponse<List<StudentInfo>>> getAllStudents()
+    public ResponseEntity<ApiResponse<List<StudentResponse>>> getAllStudents()
     {
-        return ResponseEntity.ok(_studentManagementService.getAllStudents());
+        ApiResponse<List<StudentResponse>> result = _studentManagementService.getAllStudents();
+        return ResponseEntity.status(result.statusCode()).body(result);
     }
 
-    @GetMapping("/{id}")
-    public ResponseEntity<ApiResponse<StudentInfo>> getStudentById(@PathVariable Long id)
+    @PostMapping("/getStudentById")
+    public ResponseEntity<ApiResponse<StudentResponse>> getStudentById(@Valid @RequestBody StudentIdRequest request)
     {
-        return ResponseEntity.ok(_studentManagementService.getStudentById(id));
+        ApiResponse<StudentResponse> result = _studentManagementService.getStudentById(request);
+        return ResponseEntity.status(result.statusCode()).body(result);
     }
 
-    @PreAuthorize("hasRole('Admin')")
     @PostMapping("/update")
-    public ResponseEntity<ApiResponse<Void>> updateStudent(@RequestBody StudentInfo studentInfo)
+    public ResponseEntity<ApiResponse<Void>> updateStudent(@Valid @RequestBody StudentRequest request)
     {
-        return ResponseEntity.ok(_studentManagementService.updateStudent(studentInfo));
+        ApiResponse<Void> result = _studentManagementService.updateStudent(request);
+        return ResponseEntity.status(result.statusCode()).body(result);
     }
 
-    @PreAuthorize("hasRole('Admin')")
     @PostMapping("/delete")
-    public ResponseEntity<ApiResponse<Void>> deleteStudent(@RequestBody DeleteRequest studentId)
+    public ResponseEntity<ApiResponse<Void>> deleteStudent(@Valid @RequestBody DeleteRequest request)
     {
-        return ResponseEntity.ok(_studentManagementService.deleteStudent(studentId));
+        ApiResponse<Void> result = _studentManagementService.deleteStudent(request);
+        return ResponseEntity.status(result.statusCode()).body(result);
     }
 
 }

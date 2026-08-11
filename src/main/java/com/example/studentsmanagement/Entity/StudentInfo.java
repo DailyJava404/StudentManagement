@@ -4,17 +4,17 @@ package com.example.studentsmanagement.Entity;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
-@Table(name = "Students")
+@Table(name = "StudentInfo")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Student {
+public class StudentInfo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,9 +27,8 @@ public class Student {
     @Column(name = "LastName", nullable = false)
     private String lastName;
 
-    @Temporal(TemporalType.DATE)
     @Column(name = "DateOfBirth")
-    private Date dateOfBirth;
+    private LocalDate dateOfBirth;
 
     @Column(name = "Gender")
     private String gender;
@@ -55,7 +54,6 @@ public class Student {
     @Column(name = "ModifiedBy")
     private String modifiedBy;
 
-
     @PrePersist
     public void onCreate() {
         Date now = new Date();
@@ -66,7 +64,6 @@ public class Student {
         modifiedOn = now;
         modifiedBy = "Admin";
     }
-
 
     @PreUpdate
     public void onUpdate() {

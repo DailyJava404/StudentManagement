@@ -11,10 +11,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import java.util.List;
 
 @FeignClient(
-        name = "userClient",
+        name = "jsonPlaceholderClient",
         url = "https://jsonplaceholder.typicode.com"
 )
-public interface UserClient {
+public interface JsonPlaceholderClient {
     @GetMapping("/users")
     List<JsonPlaceholderResponse> getUsers();
 

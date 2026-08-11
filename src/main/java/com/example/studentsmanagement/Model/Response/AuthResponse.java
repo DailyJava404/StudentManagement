@@ -1,7 +1,12 @@
-package com.example.studentsmanagement.Entity.Response;
+package com.example.studentsmanagement.Model.Response;
 
-import org.apache.catalina.Role;
 
+import com.example.studentsmanagement.Enum.Role;
+import lombok.Getter;
+import lombok.Setter;
+
+@Setter
+@Getter
 public class AuthResponse {
 
     private String token;
@@ -17,27 +22,4 @@ public class AuthResponse {
         this.role = role;
     }
 
-    public String getToken() {
-        return token;
-    }
-
-    public void setToken(String token) {
-        this.token = token;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public Role getRole() {
-        return role;
-    }
-
-    public void setRole(Role role) {
-        this.role = role;
-    }
 }
