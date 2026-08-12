@@ -47,9 +47,9 @@ public class StudentController {
     }
 
     @PostMapping("/update")
-    public ResponseEntity<ApiResponse<Void>> updateStudent(@Valid @RequestBody StudentRequest request)
+    public ResponseEntity<ApiResponse<StudentResponse>> updateStudent(@Valid @RequestBody StudentRequest request)
     {
-        ApiResponse<Void> result = _studentManagementService.updateStudent(request);
+        ApiResponse<StudentResponse> result = _studentManagementService.updateStudent(request);
         return ResponseEntity.status(result.statusCode()).body(result);
     }
 

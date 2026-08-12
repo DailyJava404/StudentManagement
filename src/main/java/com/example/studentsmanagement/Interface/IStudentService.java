@@ -16,7 +16,7 @@ public interface IStudentService {
 
     ApiResponse<StudentResponse>  getStudentById(StudentIdRequest id);
 
-    ApiResponse<Void>  updateStudent(StudentRequest request);
+    ApiResponse<StudentResponse>  updateStudent(StudentRequest request);
 
     ApiResponse<Void>  deleteStudent(DeleteRequest studentId);
 

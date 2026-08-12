@@ -2,9 +2,11 @@
 
     <property name="LOG_PATH" value="logs"/>
 
+    <conversionRule conversionWord="duration" converterClass="com.example.studentsmanagement.Helper.DurationConverter"/>
+
     <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
-            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%X{requestId}] [%X{endpoint}] %-5level - %msg%n</pattern>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%X{requestId}] [%X{endpoint}] [%duration] %-5level - %msg%n</pattern>
         </encoder>
     </appender>
 
@@ -15,7 +17,7 @@
             <maxHistory>30</maxHistory>
         </rollingPolicy>
         <encoder>
-            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%X{requestId}] [%X{endpoint}] %-5level - %msg%n</pattern>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%X{requestId}] [%X{endpoint}] [%duration] %-5level - %msg%n</pattern>
         </encoder>
         <filter class="ch.qos.logback.classic.filter.LevelFilter">
             <level>INFO</level>
@@ -31,7 +33,7 @@
             <maxHistory>30</maxHistory>
         </rollingPolicy>
         <encoder>
-            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%X{requestId}] [%X{endpoint}] %-5level - %msg%n</pattern>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%X{requestId}] [%X{endpoint}] [%duration] %-5level - %msg%n</pattern>
         </encoder>
         <filter class="ch.qos.logback.classic.filter.LevelFilter">
             <level>DEBUG</level>
@@ -47,7 +49,7 @@
             <maxHistory>30</maxHistory>
         </rollingPolicy>
         <encoder>
-            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%X{requestId}] [%X{endpoint}] %-5level - %msg%n</pattern>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%X{requestId}] [%X{endpoint}] [%duration] %-5level - %msg%n</pattern>
         </encoder>
         <filter class="ch.qos.logback.classic.filter.LevelFilter">
             <level>ERROR</level>

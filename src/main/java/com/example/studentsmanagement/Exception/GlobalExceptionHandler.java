@@ -1,6 +1,9 @@
-package com.example.studentsmanagement.Config;
+package com.example.studentsmanagement.Exception;
 
+import com.example.studentsmanagement.Interface.IErrorDecoder;
 import com.example.studentsmanagement.Model.Response.ApiResponse;
+import feign.Response;
+import feign.codec.ErrorDecoder;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.HttpMessageNotReadableException;
@@ -49,4 +52,33 @@ public class GlobalExceptionHandler {
                         "Invalid request body. ID must be a number"
                 ));
     }
+
+    @ExceptionHandler(TelegramChatNotFoundException.class)
+    public ResponseEntity<ApiResponse<Map<String, Object>>> handleTelegramChatNotFound(TelegramChatNotFoundException exception) {
+        Map<String, Object> data = new LinkedHashMap<>();
+        data.put("errorCode", exception.getErrorCode());
+        data.put("description", exception.getDescription());
+
+        ApiResponse<Map<String, Object>> apiResponse = new ApiResponse<>(false , 400, exception.getMessage(), data);
+        return ResponseEntity
+                .status(HttpStatus.NOT_FOUND)
+                .body(apiResponse);
+    }
+
+    @ExceptionHandler(Exception.class)
+    public ResponseEntity<ApiResponse<Void>> handleException(Exception exception) {
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                .body(ApiResponse.fail(500, exception.getMessage()));
+    }
+
+//
+//    @ExceptionHandler(FeignException.class)
+//    public ResponseEntity<ApiResponse<Void>> handleFeignException(FeignException e) {
+//        HttpStatus status = HttpStatus.resolve(e.status()) != null
+//                ? HttpStatus.resolve(e.status())
+//                : HttpStatus.BAD_GATEWAY;
+//
+//        ApiResponse<Void> body = ApiResponse.fail(status.value(), "External service error: " + e.getMessage());
+//        return ResponseEntity.status(status).body(body);
+//    }
 }

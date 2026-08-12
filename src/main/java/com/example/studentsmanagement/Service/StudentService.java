@@ -8,19 +8,30 @@ import com.example.studentsmanagement.Model.Response.ApiResponse;
 import com.example.studentsmanagement.Interface.IStudentService;
 import com.example.studentsmanagement.Model.Response.StudentResponse;
 import com.example.studentsmanagement.Repository.StudentRepository;
+import jakarta.transaction.Transactional;
+import org.slf4j.ILoggerFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
+import org.springframework.cache.annotation.Caching;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.interceptor.TransactionAspectSupport;
 
 import java.util.List;
 
 @Service
 public class StudentService implements IStudentService {
 
+    private static final Logger logger = LoggerFactory.getLogger(StudentService.class);
     private final StudentRepository studentRepository;
     public StudentService(StudentRepository studentRepository) {
         this.studentRepository = studentRepository;
     }
 
     @Override
+    @Transactional
     public ApiResponse<Void> createStudent(StudentRequest request) {
         try {
             boolean exists = studentRepository
@@ -40,14 +51,18 @@ public class StudentService implements IStudentService {
             studentInfo.setPhone(request.getPhone());
             studentInfo.setAddress(request.getAddress());
             studentInfo.setDateOfBirth(request.getDateOfBirth());
-            studentRepository.save(studentInfo);
+            if (studentRepository.save(studentInfo) != null)
+                throw new RuntimeException("Testing rollback");
             return ApiResponse.success("Student created");
         } catch (Exception e) {
-            return ApiResponse.fail(500, "Failed to create student");
+            logger.error("Failed to create student", e);
+            TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
+            return ApiResponse.fail(500, e.getMessage());
         }
     }
 
     @Override
+    @Cacheable(value = "students", key = "'all'")
     public ApiResponse<List<StudentResponse>> getAllStudents() {
         List<StudentResponse> getAllStudents = studentRepository.findAll().stream()
                 .map(this::toResponse)
@@ -56,6 +71,7 @@ public class StudentService implements IStudentService {
     }
 
     @Override
+    @Cacheable(value = "student", key = "#request.studentId()")
     public ApiResponse<StudentResponse> getStudentById(StudentIdRequest request) {
         return studentRepository.findById(request.studentId())
                 .map(student -> ApiResponse.success(toResponse(student)))
@@ -63,7 +79,8 @@ public class StudentService implements IStudentService {
     }
 
     @Override
-    public ApiResponse<Void> updateStudent(StudentRequest request) {
+    @CachePut (value = "student", key = "#request.getStudentId()", unless = "#result.statusCode() != 200")
+    public ApiResponse<StudentResponse> updateStudent(StudentRequest request) {
         try {
             StudentInfo existing = studentRepository.findById(request.getStudentId()).orElse(null);
             if (existing == null) {
@@ -77,9 +94,9 @@ public class StudentService implements IStudentService {
             existing.setAddress(request.getAddress());
             existing.setDateOfBirth(request.getDateOfBirth());
             studentRepository.save(existing);
-            return ApiResponse.success("Student updated");
+            return ApiResponse.success(toResponse(existing));
         } catch (Exception e) {
-            return ApiResponse.fail(500, "Failed to update student");
+            return ApiResponse.fail(500, e.getMessage());
         }
     }
 
@@ -93,7 +110,7 @@ public class StudentService implements IStudentService {
             return ApiResponse.success("Student deleted successfully");
         }
         catch (Exception e) {
-            return ApiResponse.fail(500,"Failed to delete student");
+            return ApiResponse.fail(500,e.getMessage());
         }
     }
 

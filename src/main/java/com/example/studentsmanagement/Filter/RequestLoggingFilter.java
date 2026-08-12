@@ -22,17 +22,20 @@ public class RequestLoggingFilter extends OncePerRequestFilter {
 
     @Override
     protected void doFilterInternal(@NonNull HttpServletRequest request, @NonNull HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
+        long start = System.nanoTime();
         try {
             String endpoint = request.getMethod() + " " + request.getRequestURI();
             String requestId = UUID.randomUUID().toString().substring(0, 8).toUpperCase();
             MDC.put("requestId", requestId);
             MDC.put("endpoint", endpoint);
+            MDC.put("startTime", String.valueOf(start));
             filterChain.doFilter(request, response);
         } catch (Exception exception) {
             logger.error("Request failed", exception);
             throw exception;
         } finally {
-            MDC.remove("requestId");
+            logger.info("Request completed - status={}", response.getStatus());
+            MDC.clear();
         }
     }
 }
