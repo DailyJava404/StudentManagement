@@ -29,6 +29,7 @@ public class TelegramService implements ITelegramService {
     @Override
     public ApiResponse<SendMessageTelegramResponse> sendMessage(SendMessageTelegramRequest request) {
         if (request.chatId() == null || request.chatId().isBlank()) {
+            logger.debug("Telegram chat id must not be empty : {}", objectMapper.writeValueAsString(request));
             throw new IllegalArgumentException("Telegram chat id must not be empty");
         }
         SendMessageTelegramResponse sendMessageTelegramResponse = telegramClient.sendMessage(botToken, request);

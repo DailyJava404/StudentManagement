@@ -1,0 +1,52 @@
+2026-08-12 09:10:43 [] [] [] DEBUG - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-08-12 09:10:45 [] [] [] DEBUG - Filter 'requestLoggingFilter' configured for use
+2026-08-12 09:10:45 [] [] [] DEBUG - Filter 'jwtAuthFilter' configured for use
+2026-08-12 09:11:15 [C1D550B9] [POST /api/telegram/send] [364ms] DEBUG - Calling Provider url: [POST] https://api.telegram.org/bot6881258383%3AAAF3Ebp6PfHi_zsclwX7KawZgu6QjvX7zBQ/sendMessage, Request: {"chat_id":"836689434","text":"Test message"}
+2026-08-12 09:11:17 [C1D550B9] [POST /api/telegram/send] [1475ms] DEBUG - Response Telegram Message : {"ok":true,"result":{"message_id":533,"date":1786500676,"chat":{"id":836689434,"type":"private","title":null},"text":"Test message"},"error_code":null,"description":null}
+2026-08-12 09:11:27 [E492F476] [POST /api/telegram/send] [25ms] DEBUG - Calling Provider url: [POST] https://api.telegram.org/bot6881258383%3AAAF3Ebp6PfHi_zsclwX7KawZgu6QjvX7zBQ/sendMessage, Request: {"chat_id":null,"text":"Test message"}
+2026-08-12 09:11:38 [AC7D5287] [POST /api/telegram/send] [60ms] DEBUG - Calling Provider url: [POST] https://api.telegram.org/bot6881258383%3AAAF3Ebp6PfHi_zsclwX7KawZgu6QjvX7zBQ/sendMessage, Request: {"chat_id":"836689434","text":null}
+2026-08-12 09:11:40 [AC7D5287] [POST /api/telegram/send] [1071ms] DEBUG - Response Telegram Message : {"ok":true,"result":{"message_id":534,"date":1786500699,"chat":{"id":836689434,"type":"private","title":null},"text":"null"},"error_code":null,"description":null}
+2026-08-12 09:14:02 [] [] [] DEBUG - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-08-12 09:14:04 [] [] [] DEBUG - Filter 'requestLoggingFilter' configured for use
+2026-08-12 09:14:04 [] [] [] DEBUG - Filter 'jwtAuthFilter' configured for use
+2026-08-12 09:14:08 [702F2D32] [POST /api/telegram/send] [304ms] DEBUG - Calling Provider url: [POST] https://api.telegram.org/bot6881258383%3AAAF3Ebp6PfHi_zsclwX7KawZgu6QjvX7zBQ/sendMessage, Request: {"chat_id":"836689434","text":"Test message"}
+2026-08-12 09:14:09 [702F2D32] [POST /api/telegram/send] [1386ms] DEBUG - Response Telegram Message : {"ok":true,"result":{"message_id":535,"date":1786500849,"chat":{"id":836689434,"type":"private","title":null},"text":"Test message"},"error_code":null,"description":null}
+2026-08-12 09:14:24 [] [] [] DEBUG - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-08-12 09:17:26 [] [] [] DEBUG - Filter 'requestLoggingFilter' configured for use
+2026-08-12 09:17:26 [] [] [] DEBUG - Filter 'jwtAuthFilter' configured for use
+2026-08-12 09:17:29 [] [] [] DEBUG - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-08-12 09:17:50 [] [] [] DEBUG - Filter 'requestLoggingFilter' configured for use
+2026-08-12 09:17:50 [] [] [] DEBUG - Filter 'jwtAuthFilter' configured for use
+2026-08-12 09:26:02 [] [] [] DEBUG - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-08-12 09:26:31 [] [] [] DEBUG - Filter 'requestLoggingFilter' configured for use
+2026-08-12 09:26:31 [] [] [] DEBUG - Filter 'jwtAuthFilter' configured for use
+2026-08-12 09:27:08 [] [] [] DEBUG - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-08-12 09:30:00 [] [] [] DEBUG - Filter 'requestLoggingFilter' configured for use
+2026-08-12 09:30:00 [] [] [] DEBUG - Filter 'jwtAuthFilter' configured for use
+2026-08-12 09:33:02 [] [] [] DEBUG - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-08-12 09:33:04 [] [] [] DEBUG - Filter 'requestLoggingFilter' configured for use
+2026-08-12 09:33:04 [] [] [] DEBUG - Filter 'jwtAuthFilter' configured for use
+2026-08-12 09:33:54 [] [] [] DEBUG - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-08-12 09:33:55 [] [] [] DEBUG - Filter 'requestLoggingFilter' configured for use
+2026-08-12 09:33:55 [] [] [] DEBUG - Filter 'jwtAuthFilter' configured for use
+2026-08-12 09:34:23 [3F79F19B] [POST /api/telegram/send] [100ms] DEBUG - Calling Provider url: [POST] https://api.telegram.org/bot6881258383%3AAAF3Ebp6PfHi_zsclwX7KawZgu6QjvX7zBQ/sendMessage, Request: {"chat_id":"836689434","text":"Test message"}
+2026-08-12 09:34:24 [3F79F19B] [POST /api/telegram/send] [1171ms] DEBUG - Response Telegram Message : {"ok":true,"result":{"message_id":536,"date":1786502064,"chat":{"id":836689434,"type":"private","title":null},"text":"Test message"},"error_code":null,"description":null}
+2026-08-12 09:35:49 [] [] [] DEBUG - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-08-12 09:37:18 [] [] [] DEBUG - Filter 'requestLoggingFilter' configured for use
+2026-08-12 09:37:18 [] [] [] DEBUG - Filter 'jwtAuthFilter' configured for use
+2026-08-12 09:37:52 [] [] [] DEBUG - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-08-12 09:38:45 [] [] [] DEBUG - Filter 'requestLoggingFilter' configured for use
+2026-08-12 09:38:45 [] [] [] DEBUG - Filter 'jwtAuthFilter' configured for use
+2026-08-12 09:39:40 [] [] [] DEBUG - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-08-12 09:41:17 [] [] [] DEBUG - Filter 'requestLoggingFilter' configured for use
+2026-08-12 09:41:17 [] [] [] DEBUG - Filter 'jwtAuthFilter' configured for use
+2026-08-12 09:47:40 [] [] [] DEBUG - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-08-12 09:47:43 [] [] [] DEBUG - Filter 'requestLoggingFilter' configured for use
+2026-08-12 09:47:43 [] [] [] DEBUG - Filter 'jwtAuthFilter' configured for use
+2026-08-12 09:47:50 [E51806E4] [POST /api/telegram/send] [378ms] DEBUG - Calling Provider url: [POST] https://api.telegram.org/bot6881258383%3AAAF3Ebp6PfHi_zsclwX7KawZgu6QjvX7zBQ/sendMessage, Request: {"chat_id":"836689434","text":"Test message"}
+2026-08-12 09:47:51 [E51806E4] [POST /api/telegram/send] [1505ms] DEBUG - Response Telegram Message : {"ok":true,"result":{"message_id":537,"date":1786502871,"chat":{"id":836689434,"type":"private","title":null},"text":"Test message"},"error_code":null,"description":null}
+2026-08-12 09:50:41 [] [] [] DEBUG - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-08-12 09:50:43 [] [] [] DEBUG - Filter 'requestLoggingFilter' configured for use
+2026-08-12 09:50:43 [] [] [] DEBUG - Filter 'jwtAuthFilter' configured for use
+2026-08-12 09:51:02 [1FDA0CB4] [POST /api/telegram/send] [362ms] DEBUG - Calling Provider url: [POST] https://api.telegram.org/bot6881258383%3AAAF3Ebp6PfHi_zsclwX7KawZgu6QjvX7zBQ/sendMessage, Request: {"chat_id":"836689434","text":"Test message"}
+2026-08-12 09:51:03 [1FDA0CB4] [POST /api/telegram/send] [1507ms] DEBUG - Response Telegram Message : {"ok":true,"result":{"message_id":538,"date":1786503063,"chat":{"id":836689434,"type":"private","title":null},"text":"Test message"},"error_code":null,"description":null}

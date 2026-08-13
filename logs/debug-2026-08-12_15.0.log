@@ -1,0 +1,15 @@
+2026-08-12 15:02:54 [] [] [] DEBUG - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-08-12 15:02:57 [] [] [] DEBUG - Filter 'requestLoggingFilter' configured for use
+2026-08-12 15:02:57 [] [] [] DEBUG - Filter 'jwtAuthFilter' configured for use
+2026-08-12 15:12:10 [] [] [] DEBUG - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-08-12 15:12:12 [] [] [] DEBUG - Filter 'requestLoggingFilter' configured for use
+2026-08-12 15:12:12 [] [] [] DEBUG - Filter 'jwtAuthFilter' configured for use
+2026-08-12 15:22:50 [] [] [] DEBUG - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-08-12 15:22:52 [] [] [] DEBUG - Filter 'requestLoggingFilter' configured for use
+2026-08-12 15:22:52 [] [] [] DEBUG - Filter 'jwtAuthFilter' configured for use
+2026-08-12 15:24:24 [] [] [] DEBUG - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-08-12 15:24:26 [] [] [] DEBUG - Filter 'requestLoggingFilter' configured for use
+2026-08-12 15:24:26 [] [] [] DEBUG - Filter 'jwtAuthFilter' configured for use
+2026-08-12 15:42:43 [] [] [] DEBUG - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-08-12 15:42:45 [] [] [] DEBUG - Filter 'requestLoggingFilter' configured for use
+2026-08-12 15:42:45 [] [] [] DEBUG - Filter 'jwtAuthFilter' configured for use

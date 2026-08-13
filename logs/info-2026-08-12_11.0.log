@@ -1,0 +1,513 @@
+2026-08-12 11:10:13 [] [] [] INFO  - Starting StudentManagementApplication using Java 26.0.2 with PID 46295 (/Users/ewent/Documents/Programmer/Java (Spring boot)/StudentManagement/StudentManagement/target/classes started by ewent in /Users/ewent/Documents/Programmer/Java (Spring boot)/StudentManagement/StudentManagement)
+2026-08-12 11:10:13 [] [] [] INFO  - No active profile set, falling back to 1 default profile: "default"
+2026-08-12 11:10:13 [] [] [] INFO  - HV000001: Hibernate Validator 9.1.0.Final
+2026-08-12 11:10:14 [] [] [] INFO  - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-08-12 11:10:14 [] [] [] INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-12 11:10:14 [] [] [] INFO  - Finished Spring Data repository scanning in 77 ms. Found 2 JPA repository interfaces.
+2026-08-12 11:10:14 [] [] [] INFO  - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-08-12 11:10:14 [] [] [] INFO  - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-08-12 11:10:14 [] [] [] INFO  - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.studentsmanagement.Repository.StudentRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-08-12 11:10:14 [] [] [] INFO  - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.studentsmanagement.Repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-08-12 11:10:14 [] [] [] INFO  - Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2026-08-12 11:10:14 [] [] [] INFO  - BeanFactory id=1d4f5a66-3b9e-3274-ad5b-07b4335b30e4
+2026-08-12 11:10:14 [] [] [] INFO  - Tomcat initialized with port 8080 (http)
+2026-08-12 11:10:14 [] [] [] INFO  - Initializing ProtocolHandler ["http-nio-8080"]
+2026-08-12 11:10:14 [] [] [] INFO  - Starting service [Tomcat]
+2026-08-12 11:10:14 [] [] [] INFO  - Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-12 11:10:14 [] [] [] INFO  - Root WebApplicationContext: initialization completed in 784 ms
+2026-08-12 11:10:14 [] [] [] INFO  - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-12 11:10:14 [] [] [] INFO  - HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-08-12 11:10:14 [] [] [] INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-12 11:10:14 [] [] [] INFO  - HikariPool-1 - Starting...
+2026-08-12 11:10:15 [] [] [] INFO  - HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: b51aad20-b8d2-453c-b88c-ab649195c7c8
+2026-08-12 11:10:15 [] [] [] INFO  - HikariPool-1 - Start completed.
+2026-08-12 11:10:15 [] [] [] INFO  - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlserver://localhost:1433;connectRetryInterval=10;connectRetryCount=1;maxResultBuffer=-1;sendTemporalDataTypesAsStringForBulkCopy=true;delayLoadingLobs=true;useFmtOnly=false;cacheBulkCopyMetadata=false;useBulkCopyForBatchInsert=false;cancelQueryTimeout=-1;sslProtocol=TLS;calcBigDecimalPrecision=false;useDefaultJaasConfig=false;jaasConfigurationName=SQLJDBCDriver;statementPoolingCacheSize=0;serverPreparedStatementDiscardThreshold=10;enablePrepareOnFirstPreparedStatementCall=false;fips=false;socketTimeout=0;authentication=NotSpecified;authenticationScheme=nativeAuthentication;xopenStates=false;datetimeParameterType=datetime2;sendTimeAsDatetime=true;replication=false;trustStoreType=JKS;trustServerCertificate=true;TransparentNetworkIPResolution=true;iPAddressPreference=IPv4First;serverNameAsACE=false;sendStringParametersAsUnicode=true;selectMethod=direct;responseBuffering=adaptive;queryTimeout=-1;packetSize=8000;multiSubnetFailover=false;loginTimeout=30;lockTimeout=-1;lastUpdateCount=true;useFlexibleCallableStatements=true;useDefaultGSSCredential=false;prepareMethod=prepexec;encrypt=true;disableStatementPooling=true;databaseName=students_management;columnEncryptionSetting=Disabled;applicationName=Microsoft JDBC Driver for SQL Server;applicationIntent=readwrite;]
+	Database driver: Microsoft JDBC Driver 12.8 for SQL Server
+	Database dialect: SQLServerDialect
+	Database version: 16.0
+	Default catalog/schema: students_management/dbo
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 128
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-12 11:10:15 [] [] [] INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-12 11:10:15 [] [] [] INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-12 11:10:15 [] [] [] INFO  - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-12 11:10:15 [] [] [] INFO  - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2026-08-12 11:10:16 [] [] [] INFO  - Exposing 1 endpoint beneath base path '/actuator'
+2026-08-12 11:10:16 [] [] [] INFO  - Starting ProtocolHandler ["http-nio-8080"]
+2026-08-12 11:10:16 [] [] [] INFO  - Tomcat started on port 8080 (http) with context path '/'
+2026-08-12 11:10:16 [] [] [] INFO  - Started StudentManagementApplication in 3.207 seconds (process running for 3.555)
+2026-08-12 11:10:34 [] [] [] INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-12 11:10:34 [] [] [] INFO  - Initializing Servlet 'dispatcherServlet'
+2026-08-12 11:10:34 [] [] [] INFO  - Completed initialization in 4 ms
+2026-08-12 11:10:35 [40E1DD42] [POST /student/create] [55ms] INFO  - Request completed - status=200
+2026-08-12 11:10:45 [FA8C957F] [POST /student/create] [1ms] INFO  - === Extracted username: freshAdmin7
+2026-08-12 11:10:45 [FA8C957F] [POST /student/create] [274ms] INFO  - === Loaded userDetails: {"userInfo":{"id":8,"password":"$2a$10$9Y2El.fRpjCcIkA.WT5W5eXd5XoLmTUAn.8brntWDnWd1LjnqlzWe","role":"Admin","username":"freshAdmin7"},"accountNonExpired":true,"accountNonLocked":true,"authorities":[{"authority":"ROLE_Admin"}],"credentialsNonExpired":true,"enabled":true,"password":"$2a$10$9Y2El.fRpjCcIkA.WT5W5eXd5XoLmTUAn.8brntWDnWd1LjnqlzWe","username":"freshAdmin7"}
+2026-08-12 11:10:45 [FA8C957F] [POST /student/create] [275ms] INFO  - === Token valid? true
+2026-08-12 11:10:45 [FA8C957F] [POST /student/create] [276ms] INFO  - === Authentication SET in context
+2026-08-12 11:11:35 [FA8C957F] [POST /student/create] [49562ms] INFO  - Request completed - status=500
+2026-08-12 11:13:41 [] [] [] INFO  - Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-12 11:13:41 [] [] [] INFO  - Graceful shutdown complete
+2026-08-12 11:13:41 [] [] [] INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-12 11:13:41 [] [] [] INFO  - HikariPool-1 - Shutdown initiated...
+2026-08-12 11:13:41 [] [] [] INFO  - HikariPool-1 - Shutdown completed.
+2026-08-12 11:13:44 [] [] [] INFO  - Starting StudentManagementApplication using Java 26.0.2 with PID 46577 (/Users/ewent/Documents/Programmer/Java (Spring boot)/StudentManagement/StudentManagement/target/classes started by ewent in /Users/ewent/Documents/Programmer/Java (Spring boot)/StudentManagement/StudentManagement)
+2026-08-12 11:13:44 [] [] [] INFO  - No active profile set, falling back to 1 default profile: "default"
+2026-08-12 11:13:44 [] [] [] INFO  - HV000001: Hibernate Validator 9.1.0.Final
+2026-08-12 11:13:44 [] [] [] INFO  - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-08-12 11:13:44 [] [] [] INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-12 11:13:44 [] [] [] INFO  - Finished Spring Data repository scanning in 74 ms. Found 2 JPA repository interfaces.
+2026-08-12 11:13:44 [] [] [] INFO  - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-08-12 11:13:44 [] [] [] INFO  - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-08-12 11:13:44 [] [] [] INFO  - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.studentsmanagement.Repository.StudentRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-08-12 11:13:44 [] [] [] INFO  - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.studentsmanagement.Repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-08-12 11:13:44 [] [] [] INFO  - Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2026-08-12 11:13:45 [] [] [] INFO  - BeanFactory id=1d4f5a66-3b9e-3274-ad5b-07b4335b30e4
+2026-08-12 11:13:45 [] [] [] INFO  - Tomcat initialized with port 8080 (http)
+2026-08-12 11:13:45 [] [] [] INFO  - Initializing ProtocolHandler ["http-nio-8080"]
+2026-08-12 11:13:45 [] [] [] INFO  - Starting service [Tomcat]
+2026-08-12 11:13:45 [] [] [] INFO  - Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-12 11:13:45 [] [] [] INFO  - Root WebApplicationContext: initialization completed in 921 ms
+2026-08-12 11:13:45 [] [] [] INFO  - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-12 11:13:45 [] [] [] INFO  - HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-08-12 11:13:45 [] [] [] INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-12 11:13:45 [] [] [] INFO  - HikariPool-1 - Starting...
+2026-08-12 11:13:45 [] [] [] INFO  - HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: 3f5bdd15-3804-41ab-a64a-d9774800c0c5
+2026-08-12 11:13:45 [] [] [] INFO  - HikariPool-1 - Start completed.
+2026-08-12 11:13:45 [] [] [] INFO  - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlserver://localhost:1433;connectRetryInterval=10;connectRetryCount=1;maxResultBuffer=-1;sendTemporalDataTypesAsStringForBulkCopy=true;delayLoadingLobs=true;useFmtOnly=false;cacheBulkCopyMetadata=false;useBulkCopyForBatchInsert=false;cancelQueryTimeout=-1;sslProtocol=TLS;calcBigDecimalPrecision=false;useDefaultJaasConfig=false;jaasConfigurationName=SQLJDBCDriver;statementPoolingCacheSize=0;serverPreparedStatementDiscardThreshold=10;enablePrepareOnFirstPreparedStatementCall=false;fips=false;socketTimeout=0;authentication=NotSpecified;authenticationScheme=nativeAuthentication;xopenStates=false;datetimeParameterType=datetime2;sendTimeAsDatetime=true;replication=false;trustStoreType=JKS;trustServerCertificate=true;TransparentNetworkIPResolution=true;iPAddressPreference=IPv4First;serverNameAsACE=false;sendStringParametersAsUnicode=true;selectMethod=direct;responseBuffering=adaptive;queryTimeout=-1;packetSize=8000;multiSubnetFailover=false;loginTimeout=30;lockTimeout=-1;lastUpdateCount=true;useFlexibleCallableStatements=true;useDefaultGSSCredential=false;prepareMethod=prepexec;encrypt=true;disableStatementPooling=true;databaseName=students_management;columnEncryptionSetting=Disabled;applicationName=Microsoft JDBC Driver for SQL Server;applicationIntent=readwrite;]
+	Database driver: Microsoft JDBC Driver 12.8 for SQL Server
+	Database dialect: SQLServerDialect
+	Database version: 16.0
+	Default catalog/schema: students_management/dbo
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 128
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-12 11:13:46 [] [] [] INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-12 11:13:46 [] [] [] INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-12 11:13:46 [] [] [] INFO  - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-12 11:13:46 [] [] [] INFO  - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2026-08-12 11:13:47 [] [] [] INFO  - Exposing 1 endpoint beneath base path '/actuator'
+2026-08-12 11:13:47 [] [] [] INFO  - Starting ProtocolHandler ["http-nio-8080"]
+2026-08-12 11:13:47 [] [] [] INFO  - Tomcat started on port 8080 (http) with context path '/'
+2026-08-12 11:13:47 [] [] [] INFO  - Started StudentManagementApplication in 3.502 seconds (process running for 3.964)
+2026-08-12 11:13:55 [] [] [] INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-12 11:13:55 [] [] [] INFO  - Initializing Servlet 'dispatcherServlet'
+2026-08-12 11:13:55 [] [] [] INFO  - Completed initialization in 2 ms
+2026-08-12 11:13:55 [FC8DBD27] [POST /student/create] [63ms] INFO  - === Extracted username: freshAdmin7
+2026-08-12 11:13:55 [FC8DBD27] [POST /student/create] [341ms] INFO  - === Loaded userDetails: {"userInfo":{"id":8,"password":"$2a$10$9Y2El.fRpjCcIkA.WT5W5eXd5XoLmTUAn.8brntWDnWd1LjnqlzWe","role":"Admin","username":"freshAdmin7"},"accountNonExpired":true,"accountNonLocked":true,"authorities":[{"authority":"ROLE_Admin"}],"credentialsNonExpired":true,"enabled":true,"password":"$2a$10$9Y2El.fRpjCcIkA.WT5W5eXd5XoLmTUAn.8brntWDnWd1LjnqlzWe","username":"freshAdmin7"}
+2026-08-12 11:13:55 [FC8DBD27] [POST /student/create] [343ms] INFO  - === Token valid? true
+2026-08-12 11:13:55 [FC8DBD27] [POST /student/create] [346ms] INFO  - === Authentication SET in context
+2026-08-12 11:14:01 [FC8DBD27] [POST /student/create] [6473ms] INFO  - Request completed - status=500
+2026-08-12 11:15:44 [] [] [] INFO  - Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-12 11:15:44 [] [] [] INFO  - Graceful shutdown complete
+2026-08-12 11:15:44 [] [] [] INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-12 11:15:44 [] [] [] INFO  - HikariPool-1 - Shutdown initiated...
+2026-08-12 11:15:44 [] [] [] INFO  - HikariPool-1 - Shutdown completed.
+2026-08-12 11:15:47 [] [] [] INFO  - Starting StudentManagementApplication using Java 26.0.2 with PID 46686 (/Users/ewent/Documents/Programmer/Java (Spring boot)/StudentManagement/StudentManagement/target/classes started by ewent in /Users/ewent/Documents/Programmer/Java (Spring boot)/StudentManagement/StudentManagement)
+2026-08-12 11:15:47 [] [] [] INFO  - No active profile set, falling back to 1 default profile: "default"
+2026-08-12 11:15:47 [] [] [] INFO  - HV000001: Hibernate Validator 9.1.0.Final
+2026-08-12 11:15:47 [] [] [] INFO  - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-08-12 11:15:47 [] [] [] INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-12 11:15:47 [] [] [] INFO  - Finished Spring Data repository scanning in 78 ms. Found 2 JPA repository interfaces.
+2026-08-12 11:15:47 [] [] [] INFO  - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-08-12 11:15:47 [] [] [] INFO  - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-08-12 11:15:47 [] [] [] INFO  - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.studentsmanagement.Repository.StudentRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-08-12 11:15:47 [] [] [] INFO  - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.studentsmanagement.Repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-08-12 11:15:47 [] [] [] INFO  - Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2026-08-12 11:15:47 [] [] [] INFO  - BeanFactory id=1d4f5a66-3b9e-3274-ad5b-07b4335b30e4
+2026-08-12 11:15:48 [] [] [] INFO  - Tomcat initialized with port 8080 (http)
+2026-08-12 11:15:48 [] [] [] INFO  - Initializing ProtocolHandler ["http-nio-8080"]
+2026-08-12 11:15:48 [] [] [] INFO  - Starting service [Tomcat]
+2026-08-12 11:15:48 [] [] [] INFO  - Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-12 11:15:48 [] [] [] INFO  - Root WebApplicationContext: initialization completed in 827 ms
+2026-08-12 11:15:48 [] [] [] INFO  - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-12 11:15:48 [] [] [] INFO  - HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-08-12 11:15:48 [] [] [] INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-12 11:15:48 [] [] [] INFO  - HikariPool-1 - Starting...
+2026-08-12 11:15:48 [] [] [] INFO  - HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: 3adb44f6-70c3-49d2-bfed-60a5fd6678c3
+2026-08-12 11:15:48 [] [] [] INFO  - HikariPool-1 - Start completed.
+2026-08-12 11:15:48 [] [] [] INFO  - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlserver://localhost:1433;connectRetryInterval=10;connectRetryCount=1;maxResultBuffer=-1;sendTemporalDataTypesAsStringForBulkCopy=true;delayLoadingLobs=true;useFmtOnly=false;cacheBulkCopyMetadata=false;useBulkCopyForBatchInsert=false;cancelQueryTimeout=-1;sslProtocol=TLS;calcBigDecimalPrecision=false;useDefaultJaasConfig=false;jaasConfigurationName=SQLJDBCDriver;statementPoolingCacheSize=0;serverPreparedStatementDiscardThreshold=10;enablePrepareOnFirstPreparedStatementCall=false;fips=false;socketTimeout=0;authentication=NotSpecified;authenticationScheme=nativeAuthentication;xopenStates=false;datetimeParameterType=datetime2;sendTimeAsDatetime=true;replication=false;trustStoreType=JKS;trustServerCertificate=true;TransparentNetworkIPResolution=true;iPAddressPreference=IPv4First;serverNameAsACE=false;sendStringParametersAsUnicode=true;selectMethod=direct;responseBuffering=adaptive;queryTimeout=-1;packetSize=8000;multiSubnetFailover=false;loginTimeout=30;lockTimeout=-1;lastUpdateCount=true;useFlexibleCallableStatements=true;useDefaultGSSCredential=false;prepareMethod=prepexec;encrypt=true;disableStatementPooling=true;databaseName=students_management;columnEncryptionSetting=Disabled;applicationName=Microsoft JDBC Driver for SQL Server;applicationIntent=readwrite;]
+	Database driver: Microsoft JDBC Driver 12.8 for SQL Server
+	Database dialect: SQLServerDialect
+	Database version: 16.0
+	Default catalog/schema: students_management/dbo
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 128
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-12 11:15:49 [] [] [] INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-12 11:15:49 [] [] [] INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-12 11:15:49 [] [] [] INFO  - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-12 11:15:49 [] [] [] INFO  - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2026-08-12 11:15:50 [] [] [] INFO  - Exposing 1 endpoint beneath base path '/actuator'
+2026-08-12 11:15:50 [] [] [] INFO  - Starting ProtocolHandler ["http-nio-8080"]
+2026-08-12 11:15:50 [] [] [] INFO  - Tomcat started on port 8080 (http) with context path '/'
+2026-08-12 11:15:50 [] [] [] INFO  - Started StudentManagementApplication in 3.251 seconds (process running for 3.58)
+2026-08-12 11:15:57 [] [] [] INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-12 11:15:57 [] [] [] INFO  - Initializing Servlet 'dispatcherServlet'
+2026-08-12 11:15:57 [] [] [] INFO  - Completed initialization in 1 ms
+2026-08-12 11:15:57 [6C81081D] [POST /student/create] [44ms] INFO  - === Extracted username: freshAdmin7
+2026-08-12 11:15:57 [6C81081D] [POST /student/create] [278ms] INFO  - === Loaded userDetails: {"userInfo":{"id":8,"password":"$2a$10$9Y2El.fRpjCcIkA.WT5W5eXd5XoLmTUAn.8brntWDnWd1LjnqlzWe","role":"Admin","username":"freshAdmin7"},"accountNonExpired":true,"accountNonLocked":true,"authorities":[{"authority":"ROLE_Admin"}],"credentialsNonExpired":true,"enabled":true,"password":"$2a$10$9Y2El.fRpjCcIkA.WT5W5eXd5XoLmTUAn.8brntWDnWd1LjnqlzWe","username":"freshAdmin7"}
+2026-08-12 11:15:57 [6C81081D] [POST /student/create] [278ms] INFO  - === Token valid? true
+2026-08-12 11:15:57 [6C81081D] [POST /student/create] [279ms] INFO  - === Authentication SET in context
+2026-08-12 11:16:08 [6C81081D] [POST /student/create] [10788ms] INFO  - Request completed - status=500
+2026-08-12 11:16:47 [] [] [] INFO  - Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-12 11:16:47 [] [] [] INFO  - Graceful shutdown complete
+2026-08-12 11:16:47 [] [] [] INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-12 11:16:47 [] [] [] INFO  - HikariPool-1 - Shutdown initiated...
+2026-08-12 11:16:47 [] [] [] INFO  - HikariPool-1 - Shutdown completed.
+2026-08-12 11:16:48 [] [] [] INFO  - Starting StudentManagementApplication using Java 26.0.2 with PID 46736 (/Users/ewent/Documents/Programmer/Java (Spring boot)/StudentManagement/StudentManagement/target/classes started by ewent in /Users/ewent/Documents/Programmer/Java (Spring boot)/StudentManagement/StudentManagement)
+2026-08-12 11:16:48 [] [] [] INFO  - No active profile set, falling back to 1 default profile: "default"
+2026-08-12 11:16:48 [] [] [] INFO  - HV000001: Hibernate Validator 9.1.0.Final
+2026-08-12 11:16:49 [] [] [] INFO  - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-08-12 11:16:49 [] [] [] INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-12 11:16:49 [] [] [] INFO  - Finished Spring Data repository scanning in 67 ms. Found 2 JPA repository interfaces.
+2026-08-12 11:16:49 [] [] [] INFO  - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-08-12 11:16:49 [] [] [] INFO  - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-08-12 11:16:49 [] [] [] INFO  - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.studentsmanagement.Repository.StudentRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-08-12 11:16:49 [] [] [] INFO  - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.studentsmanagement.Repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-08-12 11:16:49 [] [] [] INFO  - Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2026-08-12 11:16:49 [] [] [] INFO  - BeanFactory id=1d4f5a66-3b9e-3274-ad5b-07b4335b30e4
+2026-08-12 11:16:49 [] [] [] INFO  - Tomcat initialized with port 8080 (http)
+2026-08-12 11:16:49 [] [] [] INFO  - Initializing ProtocolHandler ["http-nio-8080"]
+2026-08-12 11:16:49 [] [] [] INFO  - Starting service [Tomcat]
+2026-08-12 11:16:49 [] [] [] INFO  - Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-12 11:16:49 [] [] [] INFO  - Root WebApplicationContext: initialization completed in 737 ms
+2026-08-12 11:16:49 [] [] [] INFO  - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-12 11:16:49 [] [] [] INFO  - HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-08-12 11:16:50 [] [] [] INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-12 11:16:50 [] [] [] INFO  - HikariPool-1 - Starting...
+2026-08-12 11:16:50 [] [] [] INFO  - HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: cf088c99-db5d-451e-a2bc-1b1de961006c
+2026-08-12 11:16:50 [] [] [] INFO  - HikariPool-1 - Start completed.
+2026-08-12 11:16:50 [] [] [] INFO  - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlserver://localhost:1433;connectRetryInterval=10;connectRetryCount=1;maxResultBuffer=-1;sendTemporalDataTypesAsStringForBulkCopy=true;delayLoadingLobs=true;useFmtOnly=false;cacheBulkCopyMetadata=false;useBulkCopyForBatchInsert=false;cancelQueryTimeout=-1;sslProtocol=TLS;calcBigDecimalPrecision=false;useDefaultJaasConfig=false;jaasConfigurationName=SQLJDBCDriver;statementPoolingCacheSize=0;serverPreparedStatementDiscardThreshold=10;enablePrepareOnFirstPreparedStatementCall=false;fips=false;socketTimeout=0;authentication=NotSpecified;authenticationScheme=nativeAuthentication;xopenStates=false;datetimeParameterType=datetime2;sendTimeAsDatetime=true;replication=false;trustStoreType=JKS;trustServerCertificate=true;TransparentNetworkIPResolution=true;iPAddressPreference=IPv4First;serverNameAsACE=false;sendStringParametersAsUnicode=true;selectMethod=direct;responseBuffering=adaptive;queryTimeout=-1;packetSize=8000;multiSubnetFailover=false;loginTimeout=30;lockTimeout=-1;lastUpdateCount=true;useFlexibleCallableStatements=true;useDefaultGSSCredential=false;prepareMethod=prepexec;encrypt=true;disableStatementPooling=true;databaseName=students_management;columnEncryptionSetting=Disabled;applicationName=Microsoft JDBC Driver for SQL Server;applicationIntent=readwrite;]
+	Database driver: Microsoft JDBC Driver 12.8 for SQL Server
+	Database dialect: SQLServerDialect
+	Database version: 16.0
+	Default catalog/schema: students_management/dbo
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 128
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-12 11:16:51 [] [] [] INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-12 11:16:51 [] [] [] INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-12 11:16:51 [] [] [] INFO  - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-12 11:16:51 [] [] [] INFO  - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2026-08-12 11:16:52 [] [] [] INFO  - Exposing 1 endpoint beneath base path '/actuator'
+2026-08-12 11:16:52 [] [] [] INFO  - Starting ProtocolHandler ["http-nio-8080"]
+2026-08-12 11:16:52 [] [] [] INFO  - Tomcat started on port 8080 (http) with context path '/'
+2026-08-12 11:16:52 [] [] [] INFO  - Started StudentManagementApplication in 3.712 seconds (process running for 4.054)
+2026-08-12 11:16:54 [] [] [] INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-12 11:16:54 [] [] [] INFO  - Initializing Servlet 'dispatcherServlet'
+2026-08-12 11:16:54 [] [] [] INFO  - Completed initialization in 1 ms
+2026-08-12 11:16:55 [A35D030B] [POST /student/create] [47ms] INFO  - === Extracted username: freshAdmin7
+2026-08-12 11:16:55 [A35D030B] [POST /student/create] [287ms] INFO  - === Loaded userDetails: {"userInfo":{"id":8,"password":"$2a$10$9Y2El.fRpjCcIkA.WT5W5eXd5XoLmTUAn.8brntWDnWd1LjnqlzWe","role":"Admin","username":"freshAdmin7"},"accountNonExpired":true,"accountNonLocked":true,"authorities":[{"authority":"ROLE_Admin"}],"credentialsNonExpired":true,"enabled":true,"password":"$2a$10$9Y2El.fRpjCcIkA.WT5W5eXd5XoLmTUAn.8brntWDnWd1LjnqlzWe","username":"freshAdmin7"}
+2026-08-12 11:16:55 [A35D030B] [POST /student/create] [287ms] INFO  - === Token valid? true
+2026-08-12 11:16:55 [A35D030B] [POST /student/create] [288ms] INFO  - === Authentication SET in context
+2026-08-12 11:17:04 [A35D030B] [POST /student/create] [9788ms] INFO  - Request completed - status=200
+2026-08-12 11:22:12 [DF09A9AF] [POST /student/create] [1ms] INFO  - === Extracted username: freshAdmin7
+2026-08-12 11:22:12 [DF09A9AF] [POST /student/create] [20ms] INFO  - === Loaded userDetails: {"userInfo":{"id":8,"password":"$2a$10$9Y2El.fRpjCcIkA.WT5W5eXd5XoLmTUAn.8brntWDnWd1LjnqlzWe","role":"Admin","username":"freshAdmin7"},"accountNonExpired":true,"accountNonLocked":true,"authorities":[{"authority":"ROLE_Admin"}],"credentialsNonExpired":true,"enabled":true,"password":"$2a$10$9Y2El.fRpjCcIkA.WT5W5eXd5XoLmTUAn.8brntWDnWd1LjnqlzWe","username":"freshAdmin7"}
+2026-08-12 11:22:12 [DF09A9AF] [POST /student/create] [20ms] INFO  - === Token valid? true
+2026-08-12 11:22:12 [DF09A9AF] [POST /student/create] [21ms] INFO  - === Authentication SET in context
+2026-08-12 11:22:17 [DF09A9AF] [POST /student/create] [5682ms] INFO  - Request completed - status=200
+2026-08-12 11:23:12 [] [] [] INFO  - Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-12 11:23:12 [] [] [] INFO  - Graceful shutdown complete
+2026-08-12 11:23:12 [] [] [] INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-12 11:23:12 [] [] [] INFO  - HikariPool-1 - Shutdown initiated...
+2026-08-12 11:23:12 [] [] [] INFO  - HikariPool-1 - Shutdown completed.
+2026-08-12 11:23:14 [] [] [] INFO  - Starting StudentManagementApplication using Java 26.0.2 with PID 47180 (/Users/ewent/Documents/Programmer/Java (Spring boot)/StudentManagement/StudentManagement/target/classes started by ewent in /Users/ewent/Documents/Programmer/Java (Spring boot)/StudentManagement/StudentManagement)
+2026-08-12 11:23:14 [] [] [] INFO  - No active profile set, falling back to 1 default profile: "default"
+2026-08-12 11:23:14 [] [] [] INFO  - HV000001: Hibernate Validator 9.1.0.Final
+2026-08-12 11:23:14 [] [] [] INFO  - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-08-12 11:23:14 [] [] [] INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-12 11:23:14 [] [] [] INFO  - Finished Spring Data repository scanning in 81 ms. Found 2 JPA repository interfaces.
+2026-08-12 11:23:14 [] [] [] INFO  - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-08-12 11:23:14 [] [] [] INFO  - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-08-12 11:23:14 [] [] [] INFO  - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.studentsmanagement.Repository.StudentRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-08-12 11:23:14 [] [] [] INFO  - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.studentsmanagement.Repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-08-12 11:23:14 [] [] [] INFO  - Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2026-08-12 11:23:14 [] [] [] INFO  - BeanFactory id=1d4f5a66-3b9e-3274-ad5b-07b4335b30e4
+2026-08-12 11:23:14 [] [] [] INFO  - Tomcat initialized with port 8080 (http)
+2026-08-12 11:23:14 [] [] [] INFO  - Initializing ProtocolHandler ["http-nio-8080"]
+2026-08-12 11:23:14 [] [] [] INFO  - Starting service [Tomcat]
+2026-08-12 11:23:14 [] [] [] INFO  - Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-12 11:23:14 [] [] [] INFO  - Root WebApplicationContext: initialization completed in 791 ms
+2026-08-12 11:23:15 [] [] [] INFO  - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-12 11:23:15 [] [] [] INFO  - HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-08-12 11:23:15 [] [] [] INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-12 11:23:15 [] [] [] INFO  - HikariPool-1 - Starting...
+2026-08-12 11:23:15 [] [] [] INFO  - HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: 50cb64f4-d222-49b2-9433-9f89a495ea38
+2026-08-12 11:23:15 [] [] [] INFO  - HikariPool-1 - Start completed.
+2026-08-12 11:23:15 [] [] [] INFO  - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlserver://localhost:1433;connectRetryInterval=10;connectRetryCount=1;maxResultBuffer=-1;sendTemporalDataTypesAsStringForBulkCopy=true;delayLoadingLobs=true;useFmtOnly=false;cacheBulkCopyMetadata=false;useBulkCopyForBatchInsert=false;cancelQueryTimeout=-1;sslProtocol=TLS;calcBigDecimalPrecision=false;useDefaultJaasConfig=false;jaasConfigurationName=SQLJDBCDriver;statementPoolingCacheSize=0;serverPreparedStatementDiscardThreshold=10;enablePrepareOnFirstPreparedStatementCall=false;fips=false;socketTimeout=0;authentication=NotSpecified;authenticationScheme=nativeAuthentication;xopenStates=false;datetimeParameterType=datetime2;sendTimeAsDatetime=true;replication=false;trustStoreType=JKS;trustServerCertificate=true;TransparentNetworkIPResolution=true;iPAddressPreference=IPv4First;serverNameAsACE=false;sendStringParametersAsUnicode=true;selectMethod=direct;responseBuffering=adaptive;queryTimeout=-1;packetSize=8000;multiSubnetFailover=false;loginTimeout=30;lockTimeout=-1;lastUpdateCount=true;useFlexibleCallableStatements=true;useDefaultGSSCredential=false;prepareMethod=prepexec;encrypt=true;disableStatementPooling=true;databaseName=students_management;columnEncryptionSetting=Disabled;applicationName=Microsoft JDBC Driver for SQL Server;applicationIntent=readwrite;]
+	Database driver: Microsoft JDBC Driver 12.8 for SQL Server
+	Database dialect: SQLServerDialect
+	Database version: 16.0
+	Default catalog/schema: students_management/dbo
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 128
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-12 11:23:15 [] [] [] INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-12 11:23:15 [] [] [] INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-12 11:23:16 [] [] [] INFO  - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-12 11:23:16 [] [] [] INFO  - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2026-08-12 11:23:16 [] [] [] INFO  - Exposing 1 endpoint beneath base path '/actuator'
+2026-08-12 11:23:16 [] [] [] INFO  - Starting ProtocolHandler ["http-nio-8080"]
+2026-08-12 11:23:16 [] [] [] INFO  - Tomcat started on port 8080 (http) with context path '/'
+2026-08-12 11:23:16 [] [] [] INFO  - Started StudentManagementApplication in 3.096 seconds (process running for 3.479)
+2026-08-12 11:23:21 [] [] [] INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-12 11:23:21 [] [] [] INFO  - Initializing Servlet 'dispatcherServlet'
+2026-08-12 11:23:21 [] [] [] INFO  - Completed initialization in 4 ms
+2026-08-12 11:23:21 [3FEC1FF3] [POST /student/create] [94ms] INFO  - === Extracted username: freshAdmin7
+2026-08-12 11:23:21 [3FEC1FF3] [POST /student/create] [382ms] INFO  - === Loaded userDetails: {"userInfo":{"id":8,"password":"$2a$10$9Y2El.fRpjCcIkA.WT5W5eXd5XoLmTUAn.8brntWDnWd1LjnqlzWe","role":"Admin","username":"freshAdmin7"},"accountNonExpired":true,"accountNonLocked":true,"authorities":[{"authority":"ROLE_Admin"}],"credentialsNonExpired":true,"enabled":true,"password":"$2a$10$9Y2El.fRpjCcIkA.WT5W5eXd5XoLmTUAn.8brntWDnWd1LjnqlzWe","username":"freshAdmin7"}
+2026-08-12 11:23:21 [3FEC1FF3] [POST /student/create] [383ms] INFO  - === Token valid? true
+2026-08-12 11:23:21 [3FEC1FF3] [POST /student/create] [384ms] INFO  - === Authentication SET in context
+2026-08-12 11:23:30 [3FEC1FF3] [POST /student/create] [8882ms] INFO  - Request completed - status=403
+2026-08-12 11:33:31 [] [] [] INFO  - Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-12 11:33:31 [] [] [] INFO  - Graceful shutdown complete
+2026-08-12 11:33:31 [] [] [] INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-12 11:33:31 [] [] [] INFO  - HikariPool-1 - Shutdown initiated...
+2026-08-12 11:33:31 [] [] [] INFO  - HikariPool-1 - Shutdown completed.
+2026-08-12 11:33:33 [] [] [] INFO  - Starting StudentManagementApplication using Java 26.0.2 with PID 48029 (/Users/ewent/Documents/Programmer/Java (Spring boot)/StudentManagement/StudentManagement/target/classes started by ewent in /Users/ewent/Documents/Programmer/Java (Spring boot)/StudentManagement/StudentManagement)
+2026-08-12 11:33:33 [] [] [] INFO  - No active profile set, falling back to 1 default profile: "default"
+2026-08-12 11:33:33 [] [] [] INFO  - HV000001: Hibernate Validator 9.1.0.Final
+2026-08-12 11:33:33 [] [] [] INFO  - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-08-12 11:33:33 [] [] [] INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-12 11:33:33 [] [] [] INFO  - Finished Spring Data repository scanning in 72 ms. Found 2 JPA repository interfaces.
+2026-08-12 11:33:33 [] [] [] INFO  - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-08-12 11:33:33 [] [] [] INFO  - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-08-12 11:33:33 [] [] [] INFO  - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.studentsmanagement.Repository.StudentRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-08-12 11:33:33 [] [] [] INFO  - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.studentsmanagement.Repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-08-12 11:33:33 [] [] [] INFO  - Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2026-08-12 11:33:33 [] [] [] INFO  - BeanFactory id=1d4f5a66-3b9e-3274-ad5b-07b4335b30e4
+2026-08-12 11:33:34 [] [] [] INFO  - Tomcat initialized with port 8080 (http)
+2026-08-12 11:33:34 [] [] [] INFO  - Initializing ProtocolHandler ["http-nio-8080"]
+2026-08-12 11:33:34 [] [] [] INFO  - Starting service [Tomcat]
+2026-08-12 11:33:34 [] [] [] INFO  - Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-12 11:33:34 [] [] [] INFO  - Root WebApplicationContext: initialization completed in 768 ms
+2026-08-12 11:33:34 [] [] [] INFO  - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-12 11:33:34 [] [] [] INFO  - HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-08-12 11:33:34 [] [] [] INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-12 11:33:34 [] [] [] INFO  - HikariPool-1 - Starting...
+2026-08-12 11:33:34 [] [] [] INFO  - HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: 0bf041fe-3399-4020-a869-3a27651fdeae
+2026-08-12 11:33:34 [] [] [] INFO  - HikariPool-1 - Start completed.
+2026-08-12 11:33:34 [] [] [] INFO  - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlserver://localhost:1433;connectRetryInterval=10;connectRetryCount=1;maxResultBuffer=-1;sendTemporalDataTypesAsStringForBulkCopy=true;delayLoadingLobs=true;useFmtOnly=false;cacheBulkCopyMetadata=false;useBulkCopyForBatchInsert=false;cancelQueryTimeout=-1;sslProtocol=TLS;calcBigDecimalPrecision=false;useDefaultJaasConfig=false;jaasConfigurationName=SQLJDBCDriver;statementPoolingCacheSize=0;serverPreparedStatementDiscardThreshold=10;enablePrepareOnFirstPreparedStatementCall=false;fips=false;socketTimeout=0;authentication=NotSpecified;authenticationScheme=nativeAuthentication;xopenStates=false;datetimeParameterType=datetime2;sendTimeAsDatetime=true;replication=false;trustStoreType=JKS;trustServerCertificate=true;TransparentNetworkIPResolution=true;iPAddressPreference=IPv4First;serverNameAsACE=false;sendStringParametersAsUnicode=true;selectMethod=direct;responseBuffering=adaptive;queryTimeout=-1;packetSize=8000;multiSubnetFailover=false;loginTimeout=30;lockTimeout=-1;lastUpdateCount=true;useFlexibleCallableStatements=true;useDefaultGSSCredential=false;prepareMethod=prepexec;encrypt=true;disableStatementPooling=true;databaseName=students_management;columnEncryptionSetting=Disabled;applicationName=Microsoft JDBC Driver for SQL Server;applicationIntent=readwrite;]
+	Database driver: Microsoft JDBC Driver 12.8 for SQL Server
+	Database dialect: SQLServerDialect
+	Database version: 16.0
+	Default catalog/schema: students_management/dbo
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 128
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-12 11:33:35 [] [] [] INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-12 11:33:35 [] [] [] INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-12 11:33:35 [] [] [] INFO  - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-12 11:33:35 [] [] [] INFO  - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2026-08-12 11:33:36 [] [] [] INFO  - Exposing 1 endpoint beneath base path '/actuator'
+2026-08-12 11:33:36 [] [] [] INFO  - Starting ProtocolHandler ["http-nio-8080"]
+2026-08-12 11:33:36 [] [] [] INFO  - Tomcat started on port 8080 (http) with context path '/'
+2026-08-12 11:33:36 [] [] [] INFO  - Started StudentManagementApplication in 3.014 seconds (process running for 3.399)
+2026-08-12 11:33:40 [] [] [] INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-12 11:33:40 [] [] [] INFO  - Initializing Servlet 'dispatcherServlet'
+2026-08-12 11:33:40 [] [] [] INFO  - Completed initialization in 2 ms
+2026-08-12 11:33:40 [D5F01F6C] [POST /student/create] [56ms] INFO  - === Extracted username: freshAdmin7
+2026-08-12 11:33:40 [D5F01F6C] [POST /student/create] [370ms] INFO  - === Loaded userDetails: {"userInfo":{"id":8,"password":"$2a$10$9Y2El.fRpjCcIkA.WT5W5eXd5XoLmTUAn.8brntWDnWd1LjnqlzWe","role":"Admin","username":"freshAdmin7"},"accountNonExpired":true,"accountNonLocked":true,"authorities":[{"authority":"ROLE_Admin"}],"credentialsNonExpired":true,"enabled":true,"password":"$2a$10$9Y2El.fRpjCcIkA.WT5W5eXd5XoLmTUAn.8brntWDnWd1LjnqlzWe","username":"freshAdmin7"}
+2026-08-12 11:33:40 [D5F01F6C] [POST /student/create] [371ms] INFO  - === Token valid? true
+2026-08-12 11:33:40 [D5F01F6C] [POST /student/create] [372ms] INFO  - === Authentication SET in context
+2026-08-12 11:33:52 [D5F01F6C] [POST /student/create] [11950ms] INFO  - Request completed - status=500
+2026-08-12 11:36:12 [] [] [] INFO  - Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-12 11:36:12 [] [] [] INFO  - Graceful shutdown complete
+2026-08-12 11:36:12 [] [] [] INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-12 11:36:12 [] [] [] INFO  - HikariPool-1 - Shutdown initiated...
+2026-08-12 11:36:12 [] [] [] INFO  - HikariPool-1 - Shutdown completed.
+2026-08-12 11:36:13 [] [] [] INFO  - Starting StudentManagementApplication using Java 26.0.2 with PID 48263 (/Users/ewent/Documents/Programmer/Java (Spring boot)/StudentManagement/StudentManagement/target/classes started by ewent in /Users/ewent/Documents/Programmer/Java (Spring boot)/StudentManagement/StudentManagement)
+2026-08-12 11:36:13 [] [] [] INFO  - No active profile set, falling back to 1 default profile: "default"
+2026-08-12 11:36:13 [] [] [] INFO  - HV000001: Hibernate Validator 9.1.0.Final
+2026-08-12 11:36:13 [] [] [] INFO  - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-08-12 11:36:13 [] [] [] INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-12 11:36:14 [] [] [] INFO  - Finished Spring Data repository scanning in 72 ms. Found 2 JPA repository interfaces.
+2026-08-12 11:36:14 [] [] [] INFO  - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-08-12 11:36:14 [] [] [] INFO  - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-08-12 11:36:14 [] [] [] INFO  - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.studentsmanagement.Repository.StudentRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-08-12 11:36:14 [] [] [] INFO  - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.studentsmanagement.Repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-08-12 11:36:14 [] [] [] INFO  - Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2026-08-12 11:36:14 [] [] [] INFO  - BeanFactory id=1d4f5a66-3b9e-3274-ad5b-07b4335b30e4
+2026-08-12 11:36:14 [] [] [] INFO  - Tomcat initialized with port 8080 (http)
+2026-08-12 11:36:14 [] [] [] INFO  - Initializing ProtocolHandler ["http-nio-8080"]
+2026-08-12 11:36:14 [] [] [] INFO  - Starting service [Tomcat]
+2026-08-12 11:36:14 [] [] [] INFO  - Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-12 11:36:14 [] [] [] INFO  - Root WebApplicationContext: initialization completed in 719 ms
+2026-08-12 11:36:14 [] [] [] INFO  - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-12 11:36:14 [] [] [] INFO  - HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-08-12 11:36:14 [] [] [] INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-12 11:36:14 [] [] [] INFO  - HikariPool-1 - Starting...
+2026-08-12 11:36:14 [] [] [] INFO  - HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: 0ca5fc1a-27e0-4f71-972f-d9e57ab9068e
+2026-08-12 11:36:14 [] [] [] INFO  - HikariPool-1 - Start completed.
+2026-08-12 11:36:14 [] [] [] INFO  - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlserver://localhost:1433;connectRetryInterval=10;connectRetryCount=1;maxResultBuffer=-1;sendTemporalDataTypesAsStringForBulkCopy=true;delayLoadingLobs=true;useFmtOnly=false;cacheBulkCopyMetadata=false;useBulkCopyForBatchInsert=false;cancelQueryTimeout=-1;sslProtocol=TLS;calcBigDecimalPrecision=false;useDefaultJaasConfig=false;jaasConfigurationName=SQLJDBCDriver;statementPoolingCacheSize=0;serverPreparedStatementDiscardThreshold=10;enablePrepareOnFirstPreparedStatementCall=false;fips=false;socketTimeout=0;authentication=NotSpecified;authenticationScheme=nativeAuthentication;xopenStates=false;datetimeParameterType=datetime2;sendTimeAsDatetime=true;replication=false;trustStoreType=JKS;trustServerCertificate=true;TransparentNetworkIPResolution=true;iPAddressPreference=IPv4First;serverNameAsACE=false;sendStringParametersAsUnicode=true;selectMethod=direct;responseBuffering=adaptive;queryTimeout=-1;packetSize=8000;multiSubnetFailover=false;loginTimeout=30;lockTimeout=-1;lastUpdateCount=true;useFlexibleCallableStatements=true;useDefaultGSSCredential=false;prepareMethod=prepexec;encrypt=true;disableStatementPooling=true;databaseName=students_management;columnEncryptionSetting=Disabled;applicationName=Microsoft JDBC Driver for SQL Server;applicationIntent=readwrite;]
+	Database driver: Microsoft JDBC Driver 12.8 for SQL Server
+	Database dialect: SQLServerDialect
+	Database version: 16.0
+	Default catalog/schema: students_management/dbo
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 128
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-12 11:36:15 [] [] [] INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-12 11:36:15 [] [] [] INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-12 11:36:15 [] [] [] INFO  - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-12 11:36:15 [] [] [] INFO  - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2026-08-12 11:36:16 [] [] [] INFO  - Exposing 1 endpoint beneath base path '/actuator'
+2026-08-12 11:36:16 [] [] [] INFO  - Starting ProtocolHandler ["http-nio-8080"]
+2026-08-12 11:36:16 [] [] [] INFO  - Tomcat started on port 8080 (http) with context path '/'
+2026-08-12 11:36:16 [] [] [] INFO  - Started StudentManagementApplication in 2.925 seconds (process running for 3.254)
+2026-08-12 11:36:21 [] [] [] INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-12 11:36:21 [] [] [] INFO  - Initializing Servlet 'dispatcherServlet'
+2026-08-12 11:36:21 [] [] [] INFO  - Completed initialization in 1 ms
+2026-08-12 11:36:21 [22274BB6] [POST /student/create] [44ms] INFO  - === Extracted username: freshAdmin7
+2026-08-12 11:36:21 [22274BB6] [POST /student/create] [265ms] INFO  - === Loaded userDetails: {"userInfo":{"id":8,"password":"$2a$10$9Y2El.fRpjCcIkA.WT5W5eXd5XoLmTUAn.8brntWDnWd1LjnqlzWe","role":"Admin","username":"freshAdmin7"},"accountNonExpired":true,"accountNonLocked":true,"authorities":[{"authority":"ROLE_Admin"}],"credentialsNonExpired":true,"enabled":true,"password":"$2a$10$9Y2El.fRpjCcIkA.WT5W5eXd5XoLmTUAn.8brntWDnWd1LjnqlzWe","username":"freshAdmin7"}
+2026-08-12 11:36:21 [22274BB6] [POST /student/create] [266ms] INFO  - === Token valid? true
+2026-08-12 11:36:21 [22274BB6] [POST /student/create] [267ms] INFO  - === Authentication SET in context
+2026-08-12 11:36:40 [22274BB6] [POST /student/create] [19537ms] INFO  - Request completed - status=500
+2026-08-12 11:36:52 [487CC669] [POST /student/create] [2ms] INFO  - === Extracted username: freshAdmin7
+2026-08-12 11:36:53 [487CC669] [POST /student/create] [14ms] INFO  - === Loaded userDetails: {"userInfo":{"id":8,"password":"$2a$10$9Y2El.fRpjCcIkA.WT5W5eXd5XoLmTUAn.8brntWDnWd1LjnqlzWe","role":"Admin","username":"freshAdmin7"},"accountNonExpired":true,"accountNonLocked":true,"authorities":[{"authority":"ROLE_Admin"}],"credentialsNonExpired":true,"enabled":true,"password":"$2a$10$9Y2El.fRpjCcIkA.WT5W5eXd5XoLmTUAn.8brntWDnWd1LjnqlzWe","username":"freshAdmin7"}
+2026-08-12 11:36:53 [487CC669] [POST /student/create] [15ms] INFO  - === Token valid? true
+2026-08-12 11:36:53 [487CC669] [POST /student/create] [15ms] INFO  - === Authentication SET in context
+2026-08-12 11:41:57 [487CC669] [POST /student/create] [304607ms] INFO  - Request completed - status=500
+2026-08-12 11:42:31 [DFAE759A] [POST /student/create] [6ms] INFO  - Request completed - status=200
+2026-08-12 11:42:38 [0F65792F] [POST /student/create] [0ms] INFO  - Request completed - status=200
+2026-08-12 11:42:39 [374E71B7] [POST /student/create] [0ms] INFO  - Request completed - status=200
+2026-08-12 11:42:46 [AA374D03] [GET /test/protected] [1ms] INFO  - Request completed - status=200
+2026-08-12 11:42:50 [10358163] [POST /auth/login] [0ms] INFO  - === No valid Bearer header, skipping auth
+2026-08-12 11:42:50 [10358163] [POST /auth/login] [238ms] INFO  - Request completed - status=200
+2026-08-12 11:42:58 [A92569E5] [GET /test/protected] [0ms] INFO  - === Extracted username: freshAdmin7
+2026-08-12 11:42:58 [A92569E5] [GET /test/protected] [6ms] INFO  - === Loaded userDetails: {"userInfo":{"id":8,"password":"$2a$10$9Y2El.fRpjCcIkA.WT5W5eXd5XoLmTUAn.8brntWDnWd1LjnqlzWe","role":"Admin","username":"freshAdmin7"},"accountNonExpired":true,"accountNonLocked":true,"authorities":[{"authority":"ROLE_Admin"}],"credentialsNonExpired":true,"enabled":true,"password":"$2a$10$9Y2El.fRpjCcIkA.WT5W5eXd5XoLmTUAn.8brntWDnWd1LjnqlzWe","username":"freshAdmin7"}
+2026-08-12 11:42:58 [A92569E5] [GET /test/protected] [7ms] INFO  - === Token valid? true
+2026-08-12 11:42:58 [A92569E5] [GET /test/protected] [7ms] INFO  - === Authentication SET in context
+2026-08-12 11:42:58 [A92569E5] [GET /test/protected] [8ms] INFO  - Request completed - status=200
+2026-08-12 11:43:06 [9BE6A884] [POST /student/create] [0ms] INFO  - === Extracted username: freshAdmin7
+2026-08-12 11:43:06 [9BE6A884] [POST /student/create] [8ms] INFO  - === Loaded userDetails: {"userInfo":{"id":8,"password":"$2a$10$9Y2El.fRpjCcIkA.WT5W5eXd5XoLmTUAn.8brntWDnWd1LjnqlzWe","role":"Admin","username":"freshAdmin7"},"accountNonExpired":true,"accountNonLocked":true,"authorities":[{"authority":"ROLE_Admin"}],"credentialsNonExpired":true,"enabled":true,"password":"$2a$10$9Y2El.fRpjCcIkA.WT5W5eXd5XoLmTUAn.8brntWDnWd1LjnqlzWe","username":"freshAdmin7"}
+2026-08-12 11:43:06 [9BE6A884] [POST /student/create] [9ms] INFO  - === Token valid? true
+2026-08-12 11:43:06 [9BE6A884] [POST /student/create] [9ms] INFO  - === Authentication SET in context
+2026-08-12 11:44:41 [9BE6A884] [POST /student/create] [94306ms] INFO  - Request completed - status=500
+2026-08-12 11:56:38 [] [] [] INFO  - Commencing graceful shutdown. Waiting for active requests to complete
+2026-08-12 11:56:38 [] [] [] INFO  - Graceful shutdown complete
+2026-08-12 11:56:38 [] [] [] INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-12 11:56:38 [] [] [] INFO  - HikariPool-1 - Shutdown initiated...
+2026-08-12 11:56:38 [] [] [] INFO  - HikariPool-1 - Shutdown completed.
+2026-08-12 11:57:31 [] [] [] INFO  - Starting StudentManagementApplication using Java 26.0.2 with PID 49242 (/Users/ewent/Documents/Programmer/Java (Spring boot)/StudentManagement/StudentManagement/target/classes started by ewent in /Users/ewent/Documents/Programmer/Java (Spring boot)/StudentManagement/StudentManagement)
+2026-08-12 11:57:31 [] [] [] INFO  - No active profile set, falling back to 1 default profile: "default"
+2026-08-12 11:57:32 [] [] [] INFO  - HV000001: Hibernate Validator 9.1.0.Final
+2026-08-12 11:57:32 [] [] [] INFO  - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-08-12 11:57:32 [] [] [] INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-12 11:57:32 [] [] [] INFO  - Finished Spring Data repository scanning in 76 ms. Found 2 JPA repository interfaces.
+2026-08-12 11:57:32 [] [] [] INFO  - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-08-12 11:57:32 [] [] [] INFO  - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-08-12 11:57:32 [] [] [] INFO  - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.studentsmanagement.Repository.StudentRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-08-12 11:57:32 [] [] [] INFO  - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.studentsmanagement.Repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-08-12 11:57:32 [] [] [] INFO  - Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2026-08-12 11:57:32 [] [] [] INFO  - BeanFactory id=153b91b3-9b49-3bce-9f12-7197bb8c4a8e
+2026-08-12 11:57:32 [] [] [] INFO  - Tomcat initialized with port 8080 (http)
+2026-08-12 11:57:32 [] [] [] INFO  - Initializing ProtocolHandler ["http-nio-8080"]
+2026-08-12 11:57:32 [] [] [] INFO  - Starting service [Tomcat]
+2026-08-12 11:57:32 [] [] [] INFO  - Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-12 11:57:32 [] [] [] INFO  - Root WebApplicationContext: initialization completed in 800 ms
+2026-08-12 11:57:32 [] [] [] INFO  - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-12 11:57:32 [] [] [] INFO  - HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-08-12 11:57:33 [] [] [] INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-12 11:57:33 [] [] [] INFO  - HikariPool-1 - Starting...
+2026-08-12 11:57:33 [] [] [] INFO  - HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: e90846c1-e639-4607-b97b-5d0ef1536b89
+2026-08-12 11:57:33 [] [] [] INFO  - HikariPool-1 - Start completed.
+2026-08-12 11:57:33 [] [] [] INFO  - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlserver://localhost:1433;connectRetryInterval=10;connectRetryCount=1;maxResultBuffer=-1;sendTemporalDataTypesAsStringForBulkCopy=true;delayLoadingLobs=true;useFmtOnly=false;cacheBulkCopyMetadata=false;useBulkCopyForBatchInsert=false;cancelQueryTimeout=-1;sslProtocol=TLS;calcBigDecimalPrecision=false;useDefaultJaasConfig=false;jaasConfigurationName=SQLJDBCDriver;statementPoolingCacheSize=0;serverPreparedStatementDiscardThreshold=10;enablePrepareOnFirstPreparedStatementCall=false;fips=false;socketTimeout=0;authentication=NotSpecified;authenticationScheme=nativeAuthentication;xopenStates=false;datetimeParameterType=datetime2;sendTimeAsDatetime=true;replication=false;trustStoreType=JKS;trustServerCertificate=true;TransparentNetworkIPResolution=true;iPAddressPreference=IPv4First;serverNameAsACE=false;sendStringParametersAsUnicode=true;selectMethod=direct;responseBuffering=adaptive;queryTimeout=-1;packetSize=8000;multiSubnetFailover=false;loginTimeout=30;lockTimeout=-1;lastUpdateCount=true;useFlexibleCallableStatements=true;useDefaultGSSCredential=false;prepareMethod=prepexec;encrypt=true;disableStatementPooling=true;databaseName=students_management;columnEncryptionSetting=Disabled;applicationName=Microsoft JDBC Driver for SQL Server;applicationIntent=readwrite;]
+	Database driver: Microsoft JDBC Driver 12.8 for SQL Server
+	Database dialect: SQLServerDialect
+	Database version: 16.0
+	Default catalog/schema: students_management/dbo
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 128
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-12 11:57:33 [] [] [] INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-12 11:57:33 [] [] [] INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-12 11:57:33 [] [] [] INFO  - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-12 11:57:34 [] [] [] INFO  - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2026-08-12 11:57:34 [] [] [] INFO  - Exposing 1 endpoint beneath base path '/actuator'
+2026-08-12 11:57:34 [] [] [] INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-12 11:57:34 [] [] [] INFO  - HikariPool-1 - Shutdown initiated...
+2026-08-12 11:57:34 [] [] [] INFO  - HikariPool-1 - Shutdown completed.
+2026-08-12 11:57:34 [] [] [] INFO  - Stopping service [Tomcat]
+2026-08-12 11:57:34 [] [] [] INFO  - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-08-12 11:57:57 [] [] [] INFO  - Starting StudentManagementApplication using Java 26.0.2 with PID 49271 (/Users/ewent/Documents/Programmer/Java (Spring boot)/StudentManagement/StudentManagement/target/classes started by ewent in /Users/ewent/Documents/Programmer/Java (Spring boot)/StudentManagement/StudentManagement)
+2026-08-12 11:57:57 [] [] [] INFO  - No active profile set, falling back to 1 default profile: "default"
+2026-08-12 11:57:57 [] [] [] INFO  - HV000001: Hibernate Validator 9.1.0.Final
+2026-08-12 11:57:57 [] [] [] INFO  - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-08-12 11:57:57 [] [] [] INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-12 11:57:57 [] [] [] INFO  - Finished Spring Data repository scanning in 73 ms. Found 2 JPA repository interfaces.
+2026-08-12 11:57:57 [] [] [] INFO  - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-08-12 11:57:57 [] [] [] INFO  - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-08-12 11:57:57 [] [] [] INFO  - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.studentsmanagement.Repository.StudentRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-08-12 11:57:57 [] [] [] INFO  - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.studentsmanagement.Repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-08-12 11:57:57 [] [] [] INFO  - Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2026-08-12 11:57:57 [] [] [] INFO  - BeanFactory id=153b91b3-9b49-3bce-9f12-7197bb8c4a8e
+2026-08-12 11:57:58 [] [] [] INFO  - Tomcat initialized with port 8080 (http)
+2026-08-12 11:57:58 [] [] [] INFO  - Initializing ProtocolHandler ["http-nio-8080"]
+2026-08-12 11:57:58 [] [] [] INFO  - Starting service [Tomcat]
+2026-08-12 11:57:58 [] [] [] INFO  - Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-08-12 11:57:58 [] [] [] INFO  - Root WebApplicationContext: initialization completed in 782 ms
+2026-08-12 11:57:58 [] [] [] INFO  - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-12 11:57:58 [] [] [] INFO  - HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-08-12 11:57:58 [] [] [] INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-12 11:57:58 [] [] [] INFO  - HikariPool-1 - Starting...
+2026-08-12 11:57:58 [] [] [] INFO  - HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: 11f731d7-1372-4560-b37f-a7a6ac5d7789
+2026-08-12 11:57:58 [] [] [] INFO  - HikariPool-1 - Start completed.
+2026-08-12 11:57:58 [] [] [] INFO  - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlserver://localhost:1433;connectRetryInterval=10;connectRetryCount=1;maxResultBuffer=-1;sendTemporalDataTypesAsStringForBulkCopy=true;delayLoadingLobs=true;useFmtOnly=false;cacheBulkCopyMetadata=false;useBulkCopyForBatchInsert=false;cancelQueryTimeout=-1;sslProtocol=TLS;calcBigDecimalPrecision=false;useDefaultJaasConfig=false;jaasConfigurationName=SQLJDBCDriver;statementPoolingCacheSize=0;serverPreparedStatementDiscardThreshold=10;enablePrepareOnFirstPreparedStatementCall=false;fips=false;socketTimeout=0;authentication=NotSpecified;authenticationScheme=nativeAuthentication;xopenStates=false;datetimeParameterType=datetime2;sendTimeAsDatetime=true;replication=false;trustStoreType=JKS;trustServerCertificate=true;TransparentNetworkIPResolution=true;iPAddressPreference=IPv4First;serverNameAsACE=false;sendStringParametersAsUnicode=true;selectMethod=direct;responseBuffering=adaptive;queryTimeout=-1;packetSize=8000;multiSubnetFailover=false;loginTimeout=30;lockTimeout=-1;lastUpdateCount=true;useFlexibleCallableStatements=true;useDefaultGSSCredential=false;prepareMethod=prepexec;encrypt=true;disableStatementPooling=true;databaseName=students_management;columnEncryptionSetting=Disabled;applicationName=Microsoft JDBC Driver for SQL Server;applicationIntent=readwrite;]
+	Database driver: Microsoft JDBC Driver 12.8 for SQL Server
+	Database dialect: SQLServerDialect
+	Database version: 16.0
+	Default catalog/schema: students_management/dbo
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 128
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-12 11:57:59 [] [] [] INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-12 11:57:59 [] [] [] INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-12 11:57:59 [] [] [] INFO  - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-12 11:57:59 [] [] [] INFO  - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2026-08-12 11:57:59 [] [] [] INFO  - Exposing 1 endpoint beneath base path '/actuator'
+2026-08-12 11:58:00 [] [] [] INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-12 11:58:00 [] [] [] INFO  - HikariPool-1 - Shutdown initiated...
+2026-08-12 11:58:00 [] [] [] INFO  - HikariPool-1 - Shutdown completed.
+2026-08-12 11:58:00 [] [] [] INFO  - Stopping service [Tomcat]
+2026-08-12 11:58:00 [] [] [] INFO  - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.

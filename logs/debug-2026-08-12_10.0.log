@@ -1,0 +1,29 @@
+2026-08-12 10:24:27 [] [] [] DEBUG - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-08-12 10:24:29 [] [] [] DEBUG - Filter 'requestLoggingFilter' configured for use
+2026-08-12 10:24:29 [] [] [] DEBUG - Filter 'jwtAuthFilter' configured for use
+2026-08-12 10:24:45 [6CD3C7E4] [POST /api/telegram/send] [311ms] DEBUG - Calling Provider url: [POST] https://api.telegram.org/bot6881258383%3AAAF3Ebp6PfHi_zsclwX7KawZgu6QjvX7zBQ/sendMessage, Request: {"chat_id":"999993123123","text":"Test message"}
+2026-08-12 10:25:05 [848D8ABF] [POST /api/telegram/send] [21ms] DEBUG - Calling Provider url: [POST] https://api.telegram.org/bot6881258383%3AAAF3Ebp6PfHi_zsclwX7KawZgu6QjvX7zBQ/sendMessage, Request: {"chat_id":"999993123123","text":"Test message"}
+2026-08-12 10:28:59 [] [] [] DEBUG - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-08-12 10:29:01 [] [] [] DEBUG - Filter 'requestLoggingFilter' configured for use
+2026-08-12 10:29:01 [] [] [] DEBUG - Filter 'jwtAuthFilter' configured for use
+2026-08-12 10:29:09 [A213B9A9] [POST /api/telegram/send] [563ms] DEBUG - Calling Provider url: [POST] https://api.telegram.org/bot6881258383%3AAAF3Ebp6PfHi_zsclwX7KawZgu6QjvX7zBQ/sendMessage, Request: {"chat_id":"999993123123","text":"Test message"}
+2026-08-12 10:31:40 [290F8FA0] [POST /api/telegram/send] [23ms] DEBUG - Calling Provider url: [POST] https://api.telegram.org/bot6881258383%3AAAF3Ebp6PfHi_zsclwX7KawZgu6QjvX7zBQ/sendMessage, Request: {"chat_id":"999993123123","text":"Test message"}
+2026-08-12 10:31:59 [908447E0] [POST /api/telegram/send] [6ms] DEBUG - Calling Provider url: [POST] https://api.telegram.org/bot6881258383%3AAAF3Ebp6PfHi_zsclwX7KawZgu6QjvX7zBQ/sendMessage, Request: {"chat_id":"999993123123","text":"Test message"}
+2026-08-12 10:32:08 [59E8A24A] [POST /api/telegram/send] [7ms] DEBUG - Calling Provider url: [POST] https://api.telegram.org/bot6881258383%3AAAF3Ebp6PfHi_zsclwX7KawZgu6QjvX7zBQ/sendMessage, Request: {"chat_id":"fsadfasd","text":"Test message"}
+2026-08-12 10:32:52 [BD8490FC] [POST /api/telegram/send] [23300ms] DEBUG - Calling Provider url: [POST] https://api.telegram.org/bot6881258383%3AAAF3Ebp6PfHi_zsclwX7KawZgu6QjvX7zBQ/sendMessage, Request: {"chat_id":"fsadfasd","text":"Test message"}
+2026-08-12 10:37:28 [] [] [] DEBUG - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-08-12 10:37:31 [] [] [] DEBUG - Filter 'requestLoggingFilter' configured for use
+2026-08-12 10:37:31 [] [] [] DEBUG - Filter 'jwtAuthFilter' configured for use
+2026-08-12 10:37:57 [] [] [] DEBUG - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-08-12 10:37:59 [] [] [] DEBUG - Filter 'requestLoggingFilter' configured for use
+2026-08-12 10:37:59 [] [] [] DEBUG - Filter 'jwtAuthFilter' configured for use
+2026-08-12 10:38:29 [E3FA7E71] [POST /api/telegram/send] [2168ms] DEBUG - Calling Provider url: [POST] https://api.telegram.org/bot6881258383%3AAAF3Ebp6PfHi_zsclwX7KawZgu6QjvX7zBQ/sendMessage, Request: {"chat_id":"31923123222","text":"Test message"}
+2026-08-12 10:38:59 [28296C4E] [POST /api/telegram/send] [1867ms] DEBUG - Calling Provider url: [POST] https://api.telegram.org/bot6881258383%3AAAF3Ebp6PfHi_zsclwX7KawZgu6QjvX7zBQ/sendMessage, Request: {"chat_id":"eewqweqweq","text":"Test message"}
+2026-08-12 10:39:24 [38358B36] [POST /api/telegram/send] [2704ms] DEBUG - Calling Provider url: [POST] https://api.telegram.org/bot6881258383%3AAAF3Ebp6PfHi_zsclwX7KawZgu6QjvX7zBQ/sendMessage, Request: {"chat_id":"eewqweqweq","text":"Test message"}
+2026-08-12 10:39:53 [] [] [] DEBUG - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-08-12 10:39:55 [] [] [] DEBUG - Filter 'requestLoggingFilter' configured for use
+2026-08-12 10:39:55 [] [] [] DEBUG - Filter 'jwtAuthFilter' configured for use
+2026-08-12 10:40:03 [76A4C44B] [POST /api/telegram/send] [352ms] DEBUG - Calling Provider url: [POST] https://api.telegram.org/bot6881258383%3AAAF3Ebp6PfHi_zsclwX7KawZgu6QjvX7zBQ/sendMessage, Request: {"chat_id":"eewqweqweq","text":"Test message"}
+2026-08-12 10:40:29 [] [] [] DEBUG - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-08-12 10:40:31 [] [] [] DEBUG - Filter 'requestLoggingFilter' configured for use
+2026-08-12 10:40:31 [] [] [] DEBUG - Filter 'jwtAuthFilter' configured for use

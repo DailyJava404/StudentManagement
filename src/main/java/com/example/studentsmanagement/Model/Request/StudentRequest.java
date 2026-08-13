@@ -24,9 +24,8 @@ public class StudentRequest {
     private String lastName;
 
     @NotNull(message = "Date of birth is required")
-    @Past(message = "Date of birth must be in the past")
     @JsonFormat(pattern = "yyyy-MM-dd")
-    private LocalDate dateOfBirth;
+    private String dateOfBirth;
 
     @NotBlank(message = "Gender is required")
     @Pattern(regexp = "^(MALE|FEMALE|OTHER|Male|Female|Other)$", message = "Invalid gender value")
