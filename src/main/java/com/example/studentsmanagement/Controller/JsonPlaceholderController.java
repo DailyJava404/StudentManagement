@@ -4,6 +4,7 @@ import com.example.studentsmanagement.Model.Request.JsonPlaceholderRequest;
 import com.example.studentsmanagement.Model.Response.ApiResponse;
 import com.example.studentsmanagement.Model.Response.JsonPlaceholderResponse;
 import com.example.studentsmanagement.Service.JsonPlaceholderService;
+import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -24,7 +25,7 @@ public class JsonPlaceholderController {
     }
 
     @PostMapping()
-    public ResponseEntity<ApiResponse<JsonPlaceholderResponse>> createUser(@RequestBody JsonPlaceholderRequest request) {
+    public ResponseEntity<ApiResponse<JsonPlaceholderResponse>> createUser(@Valid @RequestBody JsonPlaceholderRequest request) {
         ApiResponse<JsonPlaceholderResponse> result = jsonPlaceholderService.createUser(request);
         return ResponseEntity.status(result.statusCode()).body(result);
     }

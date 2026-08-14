@@ -1,9 +1,6 @@
 package com.example.studentsmanagement.Exception;
 
-import com.example.studentsmanagement.Interface.IErrorDecoder;
 import com.example.studentsmanagement.Model.Response.ApiResponse;
-import feign.Response;
-import feign.codec.ErrorDecoder;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.HttpMessageNotReadableException;
@@ -70,15 +67,4 @@ public class GlobalExceptionHandler {
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
                 .body(ApiResponse.fail(500, exception.getMessage()));
     }
-
-//
-//    @ExceptionHandler(FeignException.class)
-//    public ResponseEntity<ApiResponse<Void>> handleFeignException(FeignException e) {
-//        HttpStatus status = HttpStatus.resolve(e.status()) != null
-//                ? HttpStatus.resolve(e.status())
-//                : HttpStatus.BAD_GATEWAY;
-//
-//        ApiResponse<Void> body = ApiResponse.fail(status.value(), "External service error: " + e.getMessage());
-//        return ResponseEntity.status(status).body(body);
-//    }
 }

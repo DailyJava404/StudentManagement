@@ -4,6 +4,13 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
+### Application logs (may contain credentials) ###
+logs/
+*.log
+
+### Local secrets ###
+.DS_Store
+
 ### STS ###
 .apt_generated
 .classpath
