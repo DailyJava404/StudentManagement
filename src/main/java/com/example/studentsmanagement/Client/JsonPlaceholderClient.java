@@ -12,7 +12,7 @@ import java.util.List;
 
 @FeignClient(
         name = "jsonPlaceholderClient",
-        url = "https://jsonplaceholder.typicode.com"
+        url = "${jsonplaceholder.baseUrl}"
 )
 public interface JsonPlaceholderClient {
     @GetMapping("/users")

@@ -1,5 +1,6 @@
 package com.example.studentsmanagement.Service;
 
+import com.example.studentsmanagement.Config.RedisCacheConfig;
 import com.example.studentsmanagement.Entity.StudentInfo;
 import com.example.studentsmanagement.Model.Request.DeleteRequest;
 import com.example.studentsmanagement.Model.Request.StudentIdRequest;
@@ -8,16 +9,12 @@ import com.example.studentsmanagement.Model.Response.ApiResponse;
 import com.example.studentsmanagement.Interface.IStudentService;
 import com.example.studentsmanagement.Model.Response.StudentResponse;
 import com.example.studentsmanagement.Repository.StudentRepository;
-import jakarta.transaction.Transactional;
-import org.slf4j.ILoggerFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
-import org.springframework.cache.annotation.Caching;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.interceptor.TransactionAspectSupport;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -31,7 +28,7 @@ public class StudentService implements IStudentService {
     }
 
     @Override
-    @Transactional
+    @Transactional(rollbackFor = Exception.class)
     public ApiResponse<Void> createStudent(StudentRequest request) {
         try {
             boolean exists = studentRepository
@@ -56,8 +53,7 @@ public class StudentService implements IStudentService {
             return ApiResponse.success("Student created");
         } catch (Exception e) {
             logger.error("Failed to create student", e);
-            TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
-            return ApiResponse.fail(500, e.getMessage());
+            throw e;
         }
     }
 
