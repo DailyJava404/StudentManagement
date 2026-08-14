@@ -32,6 +32,7 @@ public class TelegramService implements ITelegramService {
             logger.debug("Telegram chat id must not be empty : {}", objectMapper.writeValueAsString(request));
             throw new IllegalArgumentException("Telegram chat id must not be empty");
         }
+        logger.debug("Request Before Call To Provider : {}", objectMapper.writeValueAsString(request));
         SendMessageTelegramResponse sendMessageTelegramResponse = telegramClient.sendMessage(botToken, request);
         logger.debug("Response Telegram Message : {}", objectMapper.writeValueAsString(sendMessageTelegramResponse));
         if (!sendMessageTelegramResponse.success())
