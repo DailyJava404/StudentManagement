@@ -14,11 +14,17 @@ public record ApiResponse<T>(@JsonProperty("isSuccess") boolean success, int sta
     }
 
     public static <T> ApiResponse<T> success(T data) {
+
         return new ApiResponse<>(true, 200, "Success", data);
     }
 
     public static <T> ApiResponse<T> success(String message, T data) {
         return new ApiResponse<>(true, 200, message, data);
+    }
+
+    public static <T> ApiResponse<T> success(String message) {
+
+        return new ApiResponse<>(true, 200, message, null);
     }
 
     public static <T> ApiResponse<T> fail(int statusCode, String message) {
@@ -29,7 +35,4 @@ public record ApiResponse<T>(@JsonProperty("isSuccess") boolean success, int sta
         return new ApiResponse<>(false, statusCode, message, data);
     }
 
-    public static <T> ApiResponse<T> success(String message) {
-        return new ApiResponse<>(true, 200, message, null);
-    }
 }

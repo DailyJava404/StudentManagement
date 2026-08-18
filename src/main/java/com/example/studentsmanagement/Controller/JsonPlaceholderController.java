@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.concurrent.CompletableFuture;
 
 @RestController
 @RequestMapping("/external/users")
@@ -19,9 +20,9 @@ public class JsonPlaceholderController {
     }
 
     @GetMapping()
-    public ResponseEntity<ApiResponse<List<JsonPlaceholderResponse>>> getUsers() {
-        ApiResponse<List<JsonPlaceholderResponse>> result = jsonPlaceholderService.getUsers();
-        return ResponseEntity.status(result.statusCode()).body(result);
+    public CompletableFuture<ResponseEntity<ApiResponse<List<JsonPlaceholderResponse>>>> getUsers() {
+        CompletableFuture<ApiResponse<List<JsonPlaceholderResponse>>> result = jsonPlaceholderService.getUsers();
+        return result.thenApply(ResponseEntity::ok);
     }
 
     @PostMapping()

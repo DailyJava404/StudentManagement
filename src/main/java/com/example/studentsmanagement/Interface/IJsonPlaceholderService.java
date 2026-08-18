@@ -5,8 +5,9 @@ import com.example.studentsmanagement.Model.Response.ApiResponse;
 import com.example.studentsmanagement.Model.Response.JsonPlaceholderResponse;
 
 import java.util.List;
+import java.util.concurrent.CompletableFuture;
 
 public interface IJsonPlaceholderService {
-    ApiResponse<List<JsonPlaceholderResponse>> getUsers();
+    CompletableFuture<ApiResponse<List<JsonPlaceholderResponse>>> getUsers();
     ApiResponse<JsonPlaceholderResponse> createUser(JsonPlaceholderRequest request);
 }
