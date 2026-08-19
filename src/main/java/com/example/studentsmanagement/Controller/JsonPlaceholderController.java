@@ -22,7 +22,7 @@ public class JsonPlaceholderController {
     @GetMapping()
     public CompletableFuture<ResponseEntity<ApiResponse<List<JsonPlaceholderResponse>>>> getUsers() {
         CompletableFuture<ApiResponse<List<JsonPlaceholderResponse>>> result = jsonPlaceholderService.getUsers();
-        return result.thenApply(ResponseEntity::ok);
+        return result.thenApply(r -> ResponseEntity.status(r.statusCode()).body(r));
     }
 
     @PostMapping()

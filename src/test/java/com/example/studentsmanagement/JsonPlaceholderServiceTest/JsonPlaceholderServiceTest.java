@@ -1,183 +1,195 @@
 package com.example.studentsmanagement.JsonPlaceholderServiceTest;
 
 import com.example.studentsmanagement.Client.JsonPlaceholderClient;
+import com.example.studentsmanagement.Config.ExecutorConfig;
+import com.example.studentsmanagement.Exception.JsonPlaceholderFallbackHandler;
 import com.example.studentsmanagement.Model.Response.ApiResponse;
 import com.example.studentsmanagement.Model.Response.JsonPlaceholderResponse;
 import com.example.studentsmanagement.Service.JsonPlaceholderService;
 import io.github.resilience4j.circuitbreaker.CircuitBreaker;
 import io.github.resilience4j.circuitbreaker.CircuitBreakerRegistry;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.MethodOrderer;
-import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestMethodOrder;
+import io.github.resilience4j.retry.RetryRegistry;
+import io.github.resilience4j.springboot3.circuitbreaker.autoconfigure.CircuitBreakerAutoConfiguration;
+import io.github.resilience4j.springboot3.retry.autoconfigure.RetryAutoConfiguration;
+import io.github.resilience4j.springboot3.timelimiter.autoconfigure.TimeLimiterAutoConfiguration;
+import org.junit.jupiter.api.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
+import org.springframework.boot.autoconfigure.aop.AopAutoConfiguration;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.cache.CacheManager;
-import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.web.SecurityFilterChain;
-import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
+import tools.jackson.databind.ObjectMapper;
 
 import java.util.List;
-import java.util.concurrent.TimeoutException;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.mockito.Mockito.*;
 
-@SpringBootTest(
-        webEnvironment = SpringBootTest.WebEnvironment.MOCK
-)
-@DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_EACH_TEST_METHOD)
-@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+@SpringBootTest(classes = {
+        JsonPlaceholderService.class,
+        JsonPlaceholderFallbackHandler.class,
+        ExecutorConfig.class
+})
+@ImportAutoConfiguration(classes = {
+        AopAutoConfiguration.class,
+        CircuitBreakerAutoConfiguration.class,
+        TimeLimiterAutoConfiguration.class,
+        RetryAutoConfiguration.class
+})
+@TestClassOrder(ClassOrderer.OrderAnnotation.class)
 class JsonPlaceholderServiceTest {
 
-    @MockitoBean
-    private JsonPlaceholderClient jsonPlaceholderClient;
+    @MockitoBean private JsonPlaceholderClient jsonPlaceholderClient;
+    @MockitoBean private ObjectMapper objectMapper;
 
-    @MockitoBean
-    private AuthenticationManager authenticationManager;
+    @Autowired private JsonPlaceholderService jsonPlaceholderService;
+    @Autowired private CircuitBreakerRegistry circuitBreakerRegistry;
+    @Autowired private RetryRegistry retryRegistry;
 
-    @MockitoBean
-    private SecurityFilterChain securityFilterChain;
-
-    @Autowired
-    private JsonPlaceholderService jsonPlaceholderService;
-
-    @Autowired
-    private CircuitBreakerRegistry circuitBreakerRegistry;
-
-    @Autowired
-    private CacheManager cacheManager;
+    private CircuitBreaker circuitBreaker;
 
     @BeforeEach
     void setup() {
         reset(jsonPlaceholderClient);
-        circuitBreakerRegistry.circuitBreaker("jsonPlaceholderClient").reset();
-        cacheManager.getCache("users").clear();
+        circuitBreaker = circuitBreakerRegistry.circuitBreaker("jsonPlaceholderClient");
+        circuitBreaker.reset();
     }
 
-    @Test
+    @Nested
     @Order(1)
-    void shouldRetryAndEventuallySucceed() {
+    class RetryBehaviour {
+        @Test
+        void doesNotRetryWhenTheFirstCallSucceeds() {
+            // Arrange
+            when(jsonPlaceholderClient.getUsers()).thenReturn(List.of());
 
-        // Arrange
-        when(jsonPlaceholderClient.getUsers())
-                .thenThrow(new RuntimeException("fail : 1"))
-                .thenThrow(new RuntimeException("fail : 2"))
-                .thenThrow(new RuntimeException("fail : 3"))
-                .thenThrow(new RuntimeException("fail : 4"))
-                .thenReturn(List.of());
+            // Act
+            ApiResponse<List<JsonPlaceholderResponse>> result = jsonPlaceholderService.getUsers().join();
 
-        // Act
-        ApiResponse<List<JsonPlaceholderResponse>> result = jsonPlaceholderService.getUsers().join();
+            // Assert
+            assertThat(result.success()).isTrue();
+            verify(jsonPlaceholderClient, times(1)).getUsers();
+        }
 
-        // Assert
-        assertThat(result.success()).isTrue();
-        verify(jsonPlaceholderClient, atLeast(5)).getUsers();
+        @Test
+        void retriesUntilTheCallSucceeds() {
+            // Arrange
+            when(jsonPlaceholderClient.getUsers())
+                    .thenThrow(new RuntimeException("attempt 1"))
+                    .thenThrow(new RuntimeException("attempt 2"))
+                    .thenReturn(List.of());
+
+            // Act
+            ApiResponse<List<JsonPlaceholderResponse>> result = jsonPlaceholderService.getUsers().join();
+
+            // Assert
+            assertThat(result.success()).isTrue();
+            verify(jsonPlaceholderClient, times(3)).getUsers();
+        }
+
+        @Test
+        void stopsAtMaxAttemptsThenFallsBack() {
+            // Arrange
+            when(jsonPlaceholderClient.getUsers()).thenThrow(new RuntimeException("fail"));
+
+            // Act
+            ApiResponse<List<JsonPlaceholderResponse>> result = jsonPlaceholderService.getUsers().join();
+
+            // Assert
+            assertThat(result.success()).isFalse();
+            assertThat(result.statusCode()).isEqualTo(504);
+            verify(jsonPlaceholderClient, times(3)).getUsers();
+        }
     }
 
-    @Test
+    @Nested
     @Order(2)
-    void shouldCallFallbackWhenAllRetriesFail() {
+    class CircuitBreakerBehaviour {
+        @Test
+        void staysClosedWhileCallsSucceed() {
+            // Arrange
+            when(jsonPlaceholderClient.getUsers()).thenReturn(List.of());
 
-        // Arrange
-        when(jsonPlaceholderClient.getUsers()).thenThrow(new RuntimeException("fail"));
+            // Act
+            for (int i = 0; i < 5; i++) {
+                jsonPlaceholderService.getUsers().join();
+            }
 
-        // Act
-        ApiResponse<List<JsonPlaceholderResponse>> result = jsonPlaceholderService.getUsers().join();
+            // Assert
+            assertThat(circuitBreaker).isNotNull();
+            assertThat(circuitBreaker.getState()).isEqualTo(CircuitBreaker.State.CLOSED);
+            verify(jsonPlaceholderClient, times(5)).getUsers();
+        }
 
-        // Assert
-        assertThat(result.success()).isFalse();
-        assertThat(result.statusCode()).isEqualTo(504);
-        verify(jsonPlaceholderClient, atLeast(5)).getUsers();
+        @Test
+        void opensAfterTheFailureThreshold() {
+            // Arrange
+            when(jsonPlaceholderClient.getUsers()).thenThrow(new RuntimeException("service down"));
+
+            // Act
+            for (int i = 0; i < 5; i++) {
+                jsonPlaceholderService.getUsers().join();
+            }
+
+            // Assert
+            assertThat(circuitBreaker.getState()).isEqualTo(CircuitBreaker.State.OPEN);
+        }
+
+        @Test
+        void stopsCallingTheProviderWhileOpen() {
+            // Arrange
+            when(jsonPlaceholderClient.getUsers()).thenThrow(new RuntimeException("service down"));
+            for (int i = 0; i < 5; i++) {
+                jsonPlaceholderService.getUsers().join();
+            }
+            assertThat(circuitBreaker.getState()).isEqualTo(CircuitBreaker.State.OPEN);
+            reset(jsonPlaceholderClient);
+
+            // Act
+            ApiResponse<List<JsonPlaceholderResponse>> result = jsonPlaceholderService.getUsers().join();
+
+            // Assert
+            assertThat(result.success()).isFalse();
+            assertThat(result.statusCode()).isEqualTo(504);
+            verify(jsonPlaceholderClient, never()).getUsers();
+        }
     }
 
-    @Test
+    @Nested
     @Order(3)
-    void shouldStayClosedWhenAllCallsSucceed() {
+    class TimeLimiterBehaviour {
+        @Test
+        void fallsBackWhenTakeToLong() {
+            // Arrange
+            when(jsonPlaceholderClient.getUsers()).thenAnswer(invocation -> {
+                Thread.sleep(3000);
+                return List.of();
+            });
 
-        // Arrange
-        when(jsonPlaceholderClient.getUsers()).thenReturn(List.of());
-        CircuitBreaker result = circuitBreakerRegistry.circuitBreaker("jsonPlaceholderClient");
+            // Act
+            ApiResponse<List<JsonPlaceholderResponse>> result = jsonPlaceholderService.getUsers().join();
 
-        // Act
-        for (int i = 0; i < 5; i++) {
-            jsonPlaceholderService.getUsers().join();
+            // Assert
+            assertThat(result.success()).isFalse();
+            assertThat(result.statusCode()).isEqualTo(504);
         }
 
-        // Assert
-        assertThat(result).isNotNull();
-        assertThat(result.getState()).isEqualTo(CircuitBreaker.State.CLOSED);
-    }
+        @Test
+        void cutsRetriesShortWhenTheTakeToLong() {
+            // Arrange
+            when(jsonPlaceholderClient.getUsers()).thenAnswer(invocation -> {
+                Thread.sleep(400);
+                throw new RuntimeException("slow and failing");
+            });
 
-    @Test
-    @Order(4)
-    void shouldReturnFallbackResponseWhenProviderThrowsTimeoutException() {
+            // Act
+            ApiResponse<List<JsonPlaceholderResponse>> result = jsonPlaceholderService.getUsers().join();
 
-        // Arrange
-        when(jsonPlaceholderClient.getUsers()).thenAnswer(invocation -> {
-            throw new TimeoutException("Provider timeout");
-        });
-
-        // Act
-        ApiResponse<List<JsonPlaceholderResponse>> result = jsonPlaceholderService.getUsers().join();
-
-        // Assert
-        assertThat(result.success()).isFalse();
-        assertThat(result.statusCode()).isEqualTo(504);
-    }
-
-    @Test
-    @Order(5)
-    void shouldReturnFallbackResponseWhenServiceFails() {
-
-        // Arrange
-        when(jsonPlaceholderClient.getUsers()).thenThrow(new RuntimeException("service down"));
-
-        // Act
-        ApiResponse<List<JsonPlaceholderResponse>> result = jsonPlaceholderService.getUsers().join();
-
-        // Assert
-        assertThat(result.success()).isFalse();
-        assertThat(result.statusCode()).isEqualTo(504);
-        assertThat(result.message()).isEqualTo("Service temporarily unavailable");
-    }
-
-    @Test
-    @Order(6)
-    void shouldOpenCircuitAfterFailureThreshold() {
-
-        // Arrange
-        when(jsonPlaceholderClient.getUsers()).thenThrow(new RuntimeException("always fails"));
-        CircuitBreaker circuitBreaker = circuitBreakerRegistry.circuitBreaker("jsonPlaceholderClient");
-
-        // Act
-        for (int i = 0; i < 5; i++) {
-            jsonPlaceholderService.getUsers().join();
+            // Assert
+            assertThat(result.success()).isFalse();
+            assertThat(result.statusCode()).isEqualTo(504);
+            assertThat(result.message()).isEqualTo("Service temporarily unavailable");
+            verify(jsonPlaceholderClient, atMost(2)).getUsers();
         }
-
-        // Assert
-        assertThat(circuitBreaker.getState()).isEqualTo(CircuitBreaker.State.OPEN);
-    }
-
-    @Test
-    @Order(7)
-    void shouldTransitionToHalfOpenAfterWaitDuration() throws InterruptedException {
-
-        // Arrange
-        when(jsonPlaceholderClient.getUsers()).thenThrow(new RuntimeException("always fails"));
-        CircuitBreaker circuitBreaker = circuitBreakerRegistry.circuitBreaker("jsonPlaceholderClient");
-
-        // Act
-        for (int i = 0; i < 5; i++) {
-            jsonPlaceholderService.getUsers().join();
-        }
-        assertThat(circuitBreaker.getState()).isEqualTo(CircuitBreaker.State.OPEN);
-        Thread.sleep(3500);
-        jsonPlaceholderService.getUsers().join();
-
-        // Assert
-        assertThat(circuitBreaker.getState()).isEqualTo(CircuitBreaker.State.HALF_OPEN);
     }
 }

@@ -1,10 +1,8 @@
 package com.example.studentsmanagement.Exception;
 
-import com.example.studentsmanagement.Model.Request.JsonPlaceholderRequest;
 import com.example.studentsmanagement.Model.Response.ApiResponse;
 import com.example.studentsmanagement.Model.Response.JsonPlaceholderResponse;
 import org.springframework.stereotype.Component;
-import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
